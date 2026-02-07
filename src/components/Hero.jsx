@@ -1,56 +1,82 @@
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
+import Button from './ui/Button';
+import ShinyText from './ui/ShinyText';
+import GradientText from './ui/GradientText';
+import AppPreview from './ui/AppPreview'; // Importamos el componente 3D
 
-function Hero(){
+function Hero() {
     return (
-        <div className="bg-white dark:bg-gray-900 pt-50" >
-            <section className="relative">
-                <div className="relative z-10 max-w-screen-xl mx-auto px-4 py-28 md:px-8">
-                    <div className="space-y-5 max-w-4xl mx-auto text-center">
-                        <motion.h2 
-                        initial={{ opacity: 0, y: 50 }} // Empieza invisible y 30px abajo
-                            animate={{ opacity: 1, y: 0 }}  // Termina visible y en su posición
-                            transition={{ duration: 0.8, ease: "easeOut" }} // Tarda 0.8s
-                        className="text-4xl text-white font-extrabold mx-auto md:text-5xl">
-                            Build and scale up your startup with the best tools
-                        </motion.h2>
-                        <motion.p 
-                        initial={{ opacity: 0, y: 60}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{ duration: 0.8, delay:0.3, ease: "easeOut" }}
-                        className="max-w-2xl mx-auto text-gray-400">
-                            Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-                        </motion.p>
-                        <form
-                            onSubmit={(e) => e.preventDefault()}
-                            className="justify-center items-center gap-x-3 sm:flex">
-                            <input
-                                type="text"
-                                placeholder="Enter your email"
-                                className="w-full px-3 py-2.5 text-gray-400 bg-gray-700 focus:bg-gray-900 duration-150 outline-none rounded-lg shadow sm:max-w-sm sm:w-auto"
-                            />
-                            <button className="flex items-center justify-center gap-x-2 py-2.5 px-4 mt-3 w-full text-sm text-white font-medium bg-sky-500 hover:bg-sky-400 active:bg-sky-600 duration-150 rounded-lg sm:mt-0 sm:w-auto">
-                                Get started
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                                    <path fillRule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clipRule="evenodd" />
-                                </svg>
-                            </button>
-                        </form>
-                        <div className="flex justify-center items-center gap-x-4 text-gray-400 text-sm">
-                            <div className="flex">
-                                <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" /></svg>
-                                <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" /></svg>
-                                <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" /></svg>
-                                <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" /></svg>
-                                <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" /></svg>
-                            </div>
-                            <p><span className="text-gray-100">5.0</span> by over 200 users</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg" style={{ background: "linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)" }}></div>
-            </section>
-        </div>
-    )
+        <main className="relative flex flex-col max-md:gap-20 md:flex-row pb-20 items-center justify-between pt-40 px-4 md:px-16 lg:px-24 xl:px-32 bg-white dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
+            
+            {/* LADO IZQUIERDO: TEXTO Y ACCIONES */}
+            <div className="flex flex-col items-center md:items-start z-10">
+                <motion.h1 
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.9, delay: 0.5, ease: "easeOut" }}
+                    className="text-center md:text-left text-4xl leading-[46px] md:text-5xl md:leading-[68px] font-semibold max-w-xl text-slate-900 dark:text-white"
+                >
+                    AI-powered 
+                    <br />
+                    influencer marketing 
+                    <GradientText
+                        colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
+                        animationSpeed={8}
+                        showBorder={false}
+                        className="custom-class"
+                    >
+                        made simple.
+                    </GradientText>
+                </motion.h1>
+      
+                <motion.p 
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.9, delay: 1, ease: "easeOut" }}
+                    className="text-center md:text-left text-sm text-slate-700 dark:text-gray-400 max-w-lg mt-2"
+                >
+                    Unlock smarter workflows with AI tools designed to boost productivity, simplify tasks and help you do more with less effort.
+                </motion.p>
+                
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 1.5 }}
+                    className="flex items-center gap-4 mt-8 text-sm"
+                >
+                    <Button />
+                    <ShinyText
+                        text="✨ Shiny Text Effect"
+                        speed={2}
+                        disabled={false}
+                    />
+                </motion.div>
+            </div>
+
+            {/* LADO DERECHO: LA CREDIT CARD + PHONE PARALLAX */}
+            <div className="relative z-10 w-full md:w-auto flex justify-center   ">
+                <motion.div
+                classNme="-translate-x-10 "
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    transition={{ duration: 1, delay: 1.9, ease: "easeOut" }}
+                >
+                    {/* Reemplazamos el <img> por nuestro componente Parallax */}
+                    <AppPreview />
+                </motion.div>
+            </div>
+
+            {/* DECORACIÓN DE FONDO (El resplandor) */}
+            <div 
+                className="absolute inset-y-0 right-0 w-full max-w-xl h-full blur-[118px] opacity-50 dark:opacity-30 pointer-events-none" 
+                style={{ 
+                    background: "linear-gradient(152.92deg, rgba(192, 132, 252, 0.4) 10%, rgba(232, 121, 249, 0.3) 34.2%, rgba(192, 132, 252, 0.2) 77.55%)",
+                    right: "-10%" 
+                }}
+            ></div>
+
+        </main>
+    );
 }
 
 export default Hero;

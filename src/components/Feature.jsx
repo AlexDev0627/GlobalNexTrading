@@ -28,10 +28,10 @@ export default () => {
     ]
 
     return (
-        <section className="relative py-28 bg-gray-900">
+        <section className="relative py-28 bg-white dark:bg-gray-900">
             <div className="relative z-10 max-w-screen-xl mx-auto px-4 text-gray-300 justify-between gap-24 lg:flex md:px-8">
                 <div className="max-w-xl">
-                    <h3 className="text-white text-3xl font-semibold sm:text-4xl">
+                    <h3 className="text-slate-900 dark:text-white text-3xl font-semibold sm:text-4xl">
                         Do more with less complexity
                     </h3>
                     <p className="mt-3">

@@ -1,15 +1,15 @@
 export default () => {
     return (
-        <div className="py-28 bg-gray-900">
-            <div className="max-w-screen-xl mx-auto px-4 flex-wrap gap-x-12 justify-between items-center md:flex md:px-8 lg:flex-nowrap">
+        <div className="py-28 bg-white text-black dark:bg-gray-900 ">
+            <div className="max-w-screen-xl mx-auto px-4 flex-wrap gap-x-12 justify-between items-center md:flex md:px-8 lg:flex-nowrap transition-colors duration-300">
                 <div className="max-w-xl space-y-3">
-                    <h3 className="text-cyan-400 text-sm font-semibold">
+                    <h3 className="text-cyan-400 text-sm font-semibold dark:text-indigo-500">
                         SHOWCASE
                     </h3>
-                    <p className="text-white text-3xl font-semibold sm:text-4xl">
+                    <p className="text-slate-900 dark:text-white text-3xl font-semibold sm:text-4xl">
                         Trusted by the best developers and world-class teams
                     </p>
-                    <p className="text-gray-300">
+                    <p className="text-slate-800 dark:text-gray-400">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae, gravida justo. Nunc fermentum.
                     </p>
                 </div>

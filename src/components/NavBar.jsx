@@ -1,20 +1,34 @@
 import { useState, useEffect } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from '@heroicons/react/24/outline'
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function NavBar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-    const [darkMode, setDarkMode] = useState(false)
+    
+    // 1. Inicialización inteligente: Lee localStorage o la preferencia del sistema
+    const [darkMode, setDarkMode] = useState(() => {
+        if (typeof window !== 'undefined') {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                return savedTheme === 'dark';
+            }
+            // Si no hay nada guardado, detecta la configuración de Windows/Mac
+            return window.matchMedia('(prefers-color-scheme: dark)').matches;
+        }
+        return false;
+    });
 
-    // Lógica del Modo Oscuro
+    // 2. Efecto para aplicar cambios en el DOM y guardar en memoria
     useEffect(() => {
         if (darkMode) {
-            document.documentElement.classList.add('dark')
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
         } else {
-            document.documentElement.classList.remove('dark')
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
         }
-    }, [darkMode])
+    }, [darkMode]);
 
     const navigation = [
         { name: 'Product', href: '#' },
@@ -24,8 +38,12 @@ export default function NavBar() {
     ]
 
     return (
-        
-        <motion.header className="fixed top-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-white/10 transition-colors duration-300">
+        <motion.header 
+            initial={{ opacity: 0, y: -50 }}    
+            animate={{ opacity: 1, y: 0 }}  
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="fixed top-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-white/10 transition-colors duration-300"
+        >
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
 
                 {/* Logo */}
@@ -63,7 +81,7 @@ export default function NavBar() {
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <button
                         onClick={() => setDarkMode(!darkMode)}
-                        className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-yellow-400 hover:ring-2 ring-indigo-500 transition-all"
+                        className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-yellow-400 hover:ring-2 ring-indigo-500 transition-all focus:outline-none"
                     >
                         {darkMode ? <SunIcon className="size-5" /> : <MoonIcon className="size-5" />}
                     </button>
@@ -73,7 +91,7 @@ export default function NavBar() {
             {/* Menú Lateral (Móvil) */}
             <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
                 <div className="fixed inset-0 z-50" />
-                <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-900 p-6 sm:max-w-sm transition-colors duration-300">
+                <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-900 p-6 sm:max-w-sm transition-colors duration-300 border-l border-gray-200 dark:border-white/10">
                     <div className="flex items-center justify-between">
                         <a href="#" className="text-gray-900 dark:text-white font-bold text-xl">
                             GlobalNexTrading
@@ -93,18 +111,30 @@ export default function NavBar() {
                                     <a
                                         key={item.name}
                                         href={item.href}
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-white/5"
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"
                                     >
                                         {item.name}
                                     </a>
                                 ))}
+                                
+                                <hr className="border-gray-200 dark:border-white/10 my-4" />
+
                                 {/* Botón Toggle dentro del menú móvil */}
                                 <button
                                     onClick={() => setDarkMode(!darkMode)}
-                                    className="mt-4 flex w-full items-center gap-x-3 px-3 py-2 text-base font-semibold text-gray-900 dark:text-white"
+                                    className="flex w-full items-center gap-x-3 rounded-lg px-3 py-2 text-base font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"
                                 >
-                                    {darkMode ? <SunIcon className="size-6 text-yellow-400" /> : <MoonIcon className="size-6 text-gray-600" />}
-                                    {darkMode ? 'Modo Claro' : 'Modo Oscuro'}
+                                    {darkMode ? (
+                                        <>
+                                            <SunIcon className="size-6 text-yellow-400" />
+                                            <span>Modo Claro</span>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <MoonIcon className="size-6 text-gray-600" />
+                                            <span>Modo Oscuro</span>
+                                        </>
+                                    )}
                                 </button>
                             </div>
                         </div>

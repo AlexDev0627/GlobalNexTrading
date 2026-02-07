@@ -8,6 +8,7 @@ import Partners from "./components/Partners.jsx";
 import Features from "./components/Feature.jsx";
 import Stats from "./components/Stats.jsx";
 import Footer from "./components/Footer.jsx";
+import Marquee from "./components/Marquee.jsx"
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <Partners />
             <Cta />
             <Features />
+            <Marquee />
             <Stats />
             <Footer />
         </>
