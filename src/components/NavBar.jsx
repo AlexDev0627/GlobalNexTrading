@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion';
+import logo from '../assets/icons/logo1.png';
+import logo2 from '../assets/icons/logo2.png';
+
 
 export default function NavBar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -41,20 +44,23 @@ export default function NavBar() {
         <motion.header 
             initial={{ opacity: 0, y: -50 }}    
             animate={{ opacity: 1, y: 0 }}  
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="fixed top-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-white/10 transition-colors duration-300"
+            transition={{ duration: 0.8, ease: "easeOut", delay:0.5}}
+            className="fixed top-0 w-full z-50  dark:bg-transparent backdrop-blur-sm border-b border-white/10 dark:border-white/10 transition-colors duration-200
+"
         >
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
 
-                {/* Logo */}
                 <div className="flex lg:flex-1">
-                    <a href="#" className="text-gray-900 dark:text-white font-bold text-xl tracking-tight">
-                        GlobalNex<span className="text-indigo-600 dark:text-indigo-400">Trading</span>
-                    </a>
+                    <img src={logo} alt="GlobalNexTrading Logo" className="h-8 w-auto cursor-pointer  hidden dark:block transition-colors duration-900" />
+                    <img src={logo2} alt="GlobalNexTrading Logo" className="h-8 w-auto cursor-pointer block dark:hidden transition-colors duration-900" />
+
                 </div>
 
-                {/* Botón Hamburguesa (Móvil) */}
-                <div className="flex lg:hidden">
+                {/* Botón Hamburguesa*/}
+                <motion.div className="flex lg:hidden"
+                initial={{opacity:0, x:-20}}
+                    animate={{opacity:1, x:0}}
+                    transition={{duration:0.5, delay:0.8, ease:"easeOut"}}>
                     <button
                         type="button"
                         onClick={() => setMobileMenuOpen(true)}
@@ -62,18 +68,31 @@ export default function NavBar() {
                     >
                         <Bars3Icon aria-hidden="true" className="size-6" />
                     </button>
-                </div>
+                </motion.div>
 
                 {/* Menú Centrado (Escritorio) */}
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
-                        <a
+                        <motion.a
                             key={item.name}
                             href={item.href}
-                            className="text-sm/6 font-semibold text-gray-700 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
+                            initial="rest"
+                            whileHover="hover"
+                            animate="rest"
+                            className="relative block text-sm/6 font-semibold text-white dark:text-white hover:text-lime-300 dark:hover:text-lime-300 transition-colors duration-300 "
                         >
                             {item.name}
-                        </a>
+                            <motion.span 
+                            className="absolute w-full -bottom-1 left-0 h-[2px] bg-slate-900  dark:bg-lime-400"
+                            variants={{
+                                rest:{scaleX:0},
+                                hover:{scaleX:1}
+
+                            }}
+                            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+                            style={{ originX: 0.5 }} // Hace que crezca desde el centro
+        />
+                        </motion.a>
                     ))}
                 </div>
 
@@ -81,7 +100,7 @@ export default function NavBar() {
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <button
                         onClick={() => setDarkMode(!darkMode)}
-                        className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-yellow-400 hover:ring-2 ring-indigo-500 transition-all focus:outline-none"
+                        className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-yellow-400 hover:ring-2 ring-lime-300 transition-all focus:outline-none"
                     >
                         {darkMode ? <SunIcon className="size-5" /> : <MoonIcon className="size-5" />}
                     </button>

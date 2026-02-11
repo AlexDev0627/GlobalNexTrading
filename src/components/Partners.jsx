@@ -1,20 +1,22 @@
 export default () => {
     return (
-        <div className="py-28 bg-white text-black dark:bg-gray-900 ">
+        <>
+        
+        <div className="py-60  text-black dark:bg-transparent ">
             <div className="max-w-screen-xl mx-auto px-4 flex-wrap gap-x-12 justify-between items-center md:flex md:px-8 lg:flex-nowrap transition-colors duration-300">
                 <div className="max-w-xl space-y-3">
-                    <h3 className="text-cyan-400 text-sm font-semibold dark:text-indigo-500">
+                    <h3 className="text-lime-500 text-sm font-semibold dark:text-lime-500">
                         SHOWCASE
                     </h3>
                     <p className="text-slate-900 dark:text-white text-3xl font-semibold sm:text-4xl">
-                        Trusted by the best developers and world-class teams
+                         Eleva tu empresa con <br></br><span className ="text-lime-600 dark:text-lime-400">Global Next Trading</span>
                     </p>
                     <p className="text-slate-800 dark:text-gray-400">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae, gravida justo. Nunc fermentum.
                     </p>
                 </div>
                 <div className="flex-none mt-12 text-white lg:mt-0">
-                    <ul className="grid grid-cols-2 gap-2 items-center justify-center [&>*]:bg-gray-700 [&>*]:w-full [&>*]:h-20 [&>*]:flex sm:[&>*]:px-14">
+                    <ul className="grid grid-cols-2 gap-2 items-center justify-center [&>*]:bg-transparent [&>*]:w-full [&>*]:h-20 [&>*]:flex sm:[&>*]:px-14">
                         {/* LOGO 1 */}
                         <li>
                             <svg className="w-28 m-auto flex-none" viewBox="0 0 163 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,5 +56,7 @@ export default () => {
                 </div>
             </div>
         </div>
+     
+        </>
     )
 }

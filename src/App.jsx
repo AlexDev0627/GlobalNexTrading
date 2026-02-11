@@ -1,28 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import NavBar from './components/NavBar'
-import Hero from "./components/Hero.jsx";
-import Cta from "./components/Cta.jsx";
-import Partners from "./components/Partners.jsx";
-import Features from "./components/Feature.jsx";
-import Stats from "./components/Stats.jsx";
-import Footer from "./components/Footer.jsx";
-import Marquee from "./components/Marquee.jsx"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+// Importa tus nuevas páginas aquí, por ejemplo:
+// import Contacto from './pages/Contacto'; 
 
 function App() {
     return (
-        <>
-            <NavBar />
-            <Hero />
-            <Partners />
-            <Cta />
-            <Features />
-            <Marquee />
-            <Stats />
-            <Footer />
-        </>
-    )
+        <Router>
+            <div className="relative min-h-screen w-full ">
+                
+                {/* Fondo de modo oscuro fijo */}
+                <div className="fixed inset-0 z-0 pointer-events-none "
+                     
+                />
+                
+                <div className="relative z-10 flex flex-col min-h-screen">
+                    <NavBar />
+                    
+                    {/* El contenido cambia aquí adentro según la URL */}
+                    <main className="flex-grow">
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                        </Routes>
+                    </main>
+
+                    <Footer />
+                </div>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

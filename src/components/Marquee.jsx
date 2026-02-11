@@ -16,12 +16,8 @@ const Marquee = () => {
                 }
             `}</style>
 
-            {/* Contenedor principal: ahora con dark mode y padding */}
-            <div className="overflow-hidden w-full relative bg-transparent dark:bg-gray-900 py-30 transition-colors duration-300">
+            <div className="overflow-hidden w-full relative bg-transparent dark:bg-transparent py-30 transition-colors duration-300">
                 
-                {/* Degradados laterales para que los logos "aparezcan" suavemente */}
-                <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white dark:from-gray-900 to-transparent" />
-                <div className="absolute right-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-l from-white dark:from-gray-900 to-transparent" />
 
                 <div className="marquee-inner will-change-transform">
                     {/* Renderizamos los logos dos veces para que no haya saltos */}
@@ -30,8 +26,7 @@ const Marquee = () => {
                             <img 
                                 src={`https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/${company}.svg`}
                                 alt={company} 
-                                // Ajustamos el tamaño aquí: h-8 o w-32 en lugar de w-full
-                                className="h-8 w-auto transition-all duration-300" 
+                                className="h-10 w-auto transition-all duration-300" 
                                 draggable={false} 
                             />
                         </div>

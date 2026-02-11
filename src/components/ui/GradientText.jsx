@@ -4,7 +4,7 @@ import { motion, useMotionValue, useAnimationFrame, useTransform } from 'framer-
 export default function GradientText({
   children,
   className = '',
-  colors = ['#5227FF', '#FF9FFC', '#B19EEF'],
+  colors = ['#deff01', '#c2e600', '#728b00'],
   animationSpeed = 8,
   showBorder = false,
   direction = 'horizontal',
@@ -85,7 +85,7 @@ export default function GradientText({
 
   return (
     <motion.div
-      className={`relative rounded-[1.25rem] font-medium backdrop-blur transition-shadow duration-500   ${showBorder ? '' : ''} ${className}`}
+      className={`relative rounded-[1.25rem] font-medium transition-shadow duration-500   ${showBorder ? '' : ''} ${className}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
