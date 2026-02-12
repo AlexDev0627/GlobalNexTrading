@@ -1,7 +1,7 @@
 
 
 export default () => {
-    const image = './pic2.jpg'
+    const image = './pic5.jpg'
     const features = [
         {
             icon: (

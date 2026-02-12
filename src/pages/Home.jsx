@@ -10,6 +10,8 @@ import ScrollVariant from "../components/ui/ScrollVariant"
 import Mision from '../components/Mision.jsx'
 import Footer from '../components/Footer.jsx'
 import Vision from '../components/Vision.jsx'
+import Testimonial from '../components/Testimonial.jsx'
+import CallToAction from '../components/CallToAction.jsx'
 
 function Home() {
     return (
@@ -31,16 +33,17 @@ function Home() {
      `}}
             />
 
-            <div
+            {/* <div
                 className="fixed inset-0 z-0 pointer-events-none transition-opacity duration-700 ease-in-out opacity-100  dark:opacity-1"
                 style={{
                     background: "radial-gradient(125% 125% at 50% 10%, #fff 40%, #475569 100%)",
                 }}
-            />
+            /> */}
 
             <div className="relative z-10">
                 {/* <NavBar /> */}
                 <Hero />
+                <Marquee />
                 <Mision />
                 <Vision />
                 <ScrollVariant>
@@ -52,11 +55,12 @@ function Home() {
                 <ScrollVariant variant="left">
                     <Features />
                 </ScrollVariant>
-                <Marquee />
                 <FAQ />
+                <Testimonial />
                 <ScrollVariant>
                     <Stats />
                 </ScrollVariant>
+                <CallToAction />
                 <Footer />
             </div>
         </div>
