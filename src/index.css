@@ -4,15 +4,19 @@
 * {
   @apply transition-colors duration-300;
 }
+
 .rainbow::before {
-    /* ... tus otras reglas ... */
-    background-image: linear-gradient(#000); /* Color para modo claro */
+  /* ... tus otras reglas ... */
+  background-image: linear-gradient(#000);
+  /* Color para modo claro */
 }
 
 /* Esta regla detecta la clase dark que pone tu NavBar */
 .dark .rainbow::before {
-    background-image: linear-gradient(#FFF); /* Color para modo oscuro */
+  background-image: linear-gradient(#FFF);
+  /* Color para modo oscuro */
 }
+
 @layer base {
   body {
     -webkit-font-smoothing: antialiased;
@@ -36,13 +40,15 @@
 @layer base {
   /* Seleccionamos solo cuando el usuario usa el teclado (focus-visible) */
   /* Así no aparecerá el borde cuando hagas clic con el ratón, que suele ser molesto */
-  
+
   *:focus-visible {
-    @apply outline-none ring-2 ring-indigo-500 ring-offset-2 dark:ring-offset-gray-900 transition-all;
+    @apply outline-none ring-2 ring-lime-400 ring-offset-2 dark:ring-offset-gray-900 transition-all;
   }
 
   /* Específicamente para inputs y textareas del cliente */
-  input:focus, textarea:focus ,button:focus{
-    @apply outline-none ring-2 ring-indigo-500 border-transparent;
+  input:focus,
+  textarea:focus,
+  button:focus {
+    @apply outline-none ring-2 ring-lime-400 border-transparent;
   }
 }

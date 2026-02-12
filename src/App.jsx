@@ -9,15 +9,15 @@ function App() {
     return (
         <Router>
             <div className="relative min-h-screen w-full ">
-                
+
                 {/* Fondo de modo oscuro fijo */}
                 <div className="fixed inset-0 z-0 pointer-events-none "
-                     
+
                 />
-                
+
                 <div className="relative z-10 flex flex-col min-h-screen">
                     <NavBar />
-                    
+
                     {/* El contenido cambia aquí adentro según la URL */}
                     <main className="flex-grow">
                         <Routes>
@@ -25,7 +25,7 @@ function App() {
                         </Routes>
                     </main>
 
-                    <Footer />
+                    {/* <Footer /> */}
                 </div>
             </div>
         </Router>
