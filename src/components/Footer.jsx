@@ -1,4 +1,6 @@
 import logoGlobal from '../assets/icons/globalNextWhite.png';
+import logoGlobalBlack from '../assets/icons/globalNextBlack.png';
+
 export default () => {
 
     const footerNavs = [
@@ -105,8 +107,13 @@ export default () => {
                     <div className="justify-between items-center gap-12 md:flex">
                         <div className="flex-1 max-w-lg">
                             <img
-                                className="h-9 w-115 cursor-pointer"
+                                className="h-9 w-115 cursor-pointer hidden dark:block"
                                 src={logoGlobal}
+                                alt="Global Next"
+                            />
+                            <img
+                                className="h-9 w-115 cursor-pointer block dark:hidden"
+                                src={logoGlobalBlack}
                                 alt="Global Next"
                             />
                         </div>

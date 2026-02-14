@@ -1,5 +1,5 @@
 const CallToAction = () => {
-    const image = 'pic5.jpg'; 
+    const image = 'pic6.jpg';
     return (
         <>
             {/* <style>
@@ -11,17 +11,17 @@ const CallToAction = () => {
                 `}
             </style> */}
 
-            <section className="relative bg-transparent py-16 px-4">
-              
-                <div className=" relative max-w-5xl mx-auto bg-linear-to-b from-[#F8FAFF] to-[#EEF2FF] border border-[#E0E7FF] rounded-[20px] px-8 py-12 md:py-20 bg-[url('https://assets.prebuiltui.com/images/components/cta/cta-grid-bg.png')] bg-cover bg-center bg-no-repeat">
-                     <div className="w-full h-full absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-                style={{backgroundImage:`url(${image})`}}>  </div>
-                <div className="relative bg-dark/90 inset-0"></div>
-                    <div className="text-center">
-                        <h1 className="text-3xl md:text-5xl/14 leading-tight font-semibold tracking-tighter max-w-xl mx-auto mb-4">
-                            Build website <span className="bg-linear-to-r from-[#A5B4FC] to-[#666666] bg-clip-text text-transparent">without writing Code</span>
+            <section className="relative px-20 rounded-20">
+
+                <div className=" relative px-8 py-12 md:py-20 mb-40 rounded-[20px]  bg-cover bg-center bg-no-repeat overflow-hidden bg-fixed"
+                    style={{ backgroundImage: `url(${image})` }}>
+
+                    <div className="absolute bg-black/60 inset-0 h-full w-full z-0 overflow-hidden"></div>
+                    <div className="relative text-center z-10">
+                        <h1 className="text-3xl md:text-5xl/14 leading-tight font-semibold tracking-tighter max-w-xl mx-auto mb-4 text-white dark:text-white">
+                            Build website without writing Code
                         </h1>
-                        <p className="text-sm text-neutral-600 max-w-md mx-auto mb-8">
+                        <p className="text-sm text-white max-w-md mx-auto mb-8">
                             Create high-quality landing pages and websites faster using ready-made, customizable components.
                         </p>
                         <button className="bg-linear-to-b from-[#1E1E1E] to-[#050505] text-white text-sm px-6 py-3 rounded-lg border border-[#242424] inline-flex items-center gap-2 hover:opacity-90 transition-opacity cursor-pointer group">

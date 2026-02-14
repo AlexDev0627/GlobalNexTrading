@@ -80,6 +80,8 @@ export default function NavBar() {
                             whileHover="hover"
                             animate="rest"
                             className="relative block text-sm/6 font-semibold text-gray-500 hover:text-slate-900 dark:text-white dark:hover:text-lime-300 transition-colors duration-300 "
+
+
                         >
                             {item.name}
                             <motion.span
@@ -92,6 +94,7 @@ export default function NavBar() {
                                 transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
                                 style={{ originX: 0.5 }} // Hace que crezca desde el centro
                             />
+
                         </motion.a>
                     ))}
                 </div>

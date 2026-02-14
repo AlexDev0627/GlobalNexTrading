@@ -52,9 +52,7 @@ function Home() {
                 <ScrollVariant variant="right">
                     <Partners />
                 </ScrollVariant>
-                <ScrollVariant variant="left">
-                    <Features />
-                </ScrollVariant>
+                <Features />
                 <FAQ />
                 <Testimonial />
                 <ScrollVariant>

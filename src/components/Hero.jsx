@@ -8,7 +8,11 @@ import AppPreview from './ui/AppPreview';
 const images = [
     './pic1.jpg',
     './pic2.jpg',
+    './pic3.jpg',
     './pic4.jpg',
+    './pic5.jpg',
+    './pic6.webp',
+    './pic7.jpg'
 ];
 
 function Hero() {
