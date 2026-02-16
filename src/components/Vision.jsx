@@ -1,62 +1,131 @@
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
 
-const Vision = () => {
+export default function Vision() {
+    const productos = [
+        {
+            title: "Partes de automóviles",
+            desc: "Soluciones rápidas, flexibles y transparentes para la cadena de suministro automotriz.",
+            img: "./cebada.webp",
+        },
+        {
+            title: "Partes de automóviles",
+            desc: "Soluciones rápidas, flexibles y transparentes para la cadena de suministro automotriz.",
+            img: "./frutas.webp",
+        },
+        {
+            title: "Partes de automóviles",
+            desc: "Soluciones rápidas, flexibles y transparentes para la cadena de suministro automotriz.",
+            img: "./ecomerce.webp",
+        },
+        {
+            title: "Partes de automóviles",
+            desc: "Soluciones rápidas, flexibles y transparentes para la cadena de suministro automotriz.",
+            img: "./farmaceuticos.webp",
+        },
+        {
+            title: "Partes de automóviles",
+            desc: "Soluciones rápidas, flexibles y transparentes para la cadena de suministro automotriz.",
+            img: "./car.webp",
+        },
+        {
+            title: "Partes de automóviles",
+            desc: "Soluciones rápidas, flexibles y transparentes para la cadena de suministro automotriz.",
+            img: "./food.webp",
+        },
+        {
+            title: "Partes de automóviles",
+            desc: "Soluciones rápidas, flexibles y transparentes para la cadena de suministro automotriz.",
+            img: "./minerales.webp",
+        },
+        {
+            title: "Partes de automóviles",
+            desc: "Soluciones rápidas, flexibles y transparentes para la cadena de suministro automotriz.",
+            img: "./trees.webp",
+        }
+
+
+    ];
+
+
+
+    //  Creamos la "etiqueta" para el contenedor
+    const carruselRef = useRef(null);
+
+    //  Función para mover el carrusel
+    const scroll = (direccion) => {
+        if (carruselRef.current) {
+            const { scrollLeft, clientWidth } = carruselRef.current;
+
+            // Calculamos cuánto mover (el ancho de una tarjeta + el espacio/gap)
+            const desplazamiento = clientWidth <= 768 ? 320 : 400;
+
+            const nuevaPosicion = direccion === 'izq'
+                ? scrollLeft - desplazamiento
+                : scrollLeft + desplazamiento;
+
+            carruselRef.current.scrollTo({
+                left: nuevaPosicion,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     return (
-        <>
-        <section className="overflow-hidden bg-transparent sm:grid sm:grid-cols-2 sm:items-center pt-60 pb-30">
-            
-            {/* 1. IMAGEN A LA IZQUIERDA */}
-            <motion.img
-                initial={{ opacity: 0, x: -50 }} // Entra desde la izquierda
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                alt="Nuestra Visión" 
-                src="CONTAINER.png" // Cambia por tu imagen
-                className="h-full w-full object-cover sm:h-[calc(100%-2rem)] rounded-r-3xl shadow-2xl order-last sm:order-first"
-            />
-
-            {/* 2. TEXTO A LA DERECHA */}
-            <div className="p-8 md:p-12 lg:px-16 lg:py-24">
-                <div className="mx-auto max-w-xl text-center sm:text-left">
-                    <motion.h2 
-                        initial={{ opacity: 0, x: 50 }} // Entra desde la derecha
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="text-2xl font-bold md:text-3xl text-slate-800 dark:text-white"
-                    >
-                        Nuestra Visión
-                    </motion.h2>
-
-                    <motion.p 
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.5 }}
-                        className="text-slate-800 dark:text-white md:mt-4 block"
-                    >
-Consolidarnos para el año 2030 como la plataforma logística y comercial líder en la región, siendo reconocidos por nuestra capacidad de adaptación tecnológica, nuestra excelencia operativa y por ser el puente indispensable para el comercio internacional en Venezuela.                    </motion.p>
+        <section className="bg-slate-50 py-20 px-4 bg-transparent">
+            <div className="max-w-7xl mx-auto">
+                <div className="mb-12">
+                    <h1 className="text-3xl md:text-4xl font-medium text-slate-600 dark:text-gray-300 text-center ">Satisfacemos tus <br></br>necesidades de transporte <br></br>marítimo</h1>
+                    <p className="text-slate-600 dark:text-gray-300 mt-2 text-center max-w-2xl mx-auto pt-5">En GlobalNexTrading, nos consolidamos como su socio estratégico integral, ofreciendo soluciones de logística y comercio internacional diseñadas a medida para impulsar el crecimiento específico de su negocio. Gracias a nuestra red global, versatilidad multimodal y una gestión eficiente de recursos, garantizamos un servicio profesional y confiable que asegura el movimiento seguro y oportuno de sus mercancías en cualquier parte del mundo.</p>
                 </div>
-            </div>
-            
-        </section>
 
-                     <div className="flex items-center px-6 md:px-12 py-10">
-    {/* Línea izquierda - Degradado de transparente a gris */}
-    <span className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 to-gray-300 dark:from-transparent dark:via-slate-700 dark:to-slate-700"></span>
-    
-    {/* Título - Con tu color lima */}
-    <span className="shrink-0 px-6 text-sm font-semibold tracking-widest text-lime-600 dark:text-lime-400 uppercase">
-        Nuestros Pilares
-    </span>
-    
-    {/* Línea derecha - Degradado de gris a transparente */}
-    <span className="h-px flex-1 bg-gradient-to-r from-gray-300 via-gray-300 to-transparent dark:from-slate-700 dark:via-slate-700 dark:to-transparent"></span>
-</div>
-        </>
-        
+                <div
+                    ref={carruselRef}
+                    className="flex overflow-x-hidden gap-6 scroll-smooth snap-x snap-mandatory pb-8"
+                >
+                    {productos.map((item, index) => (
+                        <div
+                            key={index}
+                            className="min-w-[300px] md:min-w-[380px] snap-center hover:shadow-lg transition-shadow duration-300 ease-in-out "
+                        >
+                            <div className="group dark:bg-gray-900 dark:border-lime-900 rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                                <div className="aspect-video overflow-hidden">
+                                    <img
+                                        className="w-full h-full object-cover"
+                                        src={item.img || "https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?w=800&q=80"}
+                                        alt={item.title}
+                                    />
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold text-slate-800 dark:text-gray-300 mb-2">{item.title}</h3>
+                                    <p className="text-sm text-slate-600 dark:text-gray-300 line-clamp-3">{item.desc}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* 4. Botones de Navegación (Paginación) */}
+                <div className="flex items-center justify-center gap-4 mt-8">
+                    <button
+                        onClick={() => scroll('izq')}
+                        className="p-3 rounded-full bg-white border border-slate-200 shadow-sm hover:bg-indigo-600 hover:text-white transition-all"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+
+                    <button
+                        onClick={() => scroll('der')}
+                        className="p-3 rounded-full bg-white border border-slate-200 shadow-sm hover:bg-indigo-600 hover:text-white transition-all"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </section>
     );
 }
-
-export default Vision;

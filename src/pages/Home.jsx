@@ -43,7 +43,9 @@ function Home() {
             <div className="relative z-10">
                 {/* <NavBar /> */}
                 <Hero />
-                <Marquee />
+                <ScrollVariant>
+                    <Marquee />
+                </ScrollVariant>
                 <Mision />
                 <Vision />
                 <ScrollVariant>
@@ -54,11 +56,15 @@ function Home() {
                 </ScrollVariant>
                 <Features />
                 <FAQ />
-                <Testimonial />
+                <ScrollVariant>
+                    <Testimonial />
+                </ScrollVariant>
                 <ScrollVariant>
                     <Stats />
                 </ScrollVariant>
-                <CallToAction />
+                <ScrollVariant>
+                    <CallToAction />
+                </ScrollVariant>
                 <Footer />
             </div>
         </div>

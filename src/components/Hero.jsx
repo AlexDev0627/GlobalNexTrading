@@ -1,17 +1,15 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Button from './ui/Button';
-import ShinyText from './ui/ShinyText';
 import GradientText from './ui/GradientText';
 import AppPreview from './ui/AppPreview';
 
 const images = [
     './pic1.jpg',
     './pic2.jpg',
-    './pic3.jpg',
+    './pic3.png',
     './pic4.jpg',
     './pic5.jpg',
-    './pic6.webp',
+    './pic6.jpg',
     './pic7.jpg'
 ];
 
