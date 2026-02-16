@@ -14,7 +14,7 @@ const Mision = () => {
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             className="text-2xl font-bold md:text-3xl text-slate-800 dark:text-white"
                         >
-                            ¿Está listo para hacer crecer su negocio?
+                            ¿Está listo para hacer <span className="text-lime-500">crecer</span> su <span className="text-lime-500">negocio?</span>
                         </motion.h2>
 
                         <motion.p

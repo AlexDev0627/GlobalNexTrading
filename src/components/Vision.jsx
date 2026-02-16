@@ -71,10 +71,10 @@ export default function Vision() {
     };
 
     return (
-        <section className="bg-slate-50 py-20 px-4 bg-transparent">
+        <section className=" py-20 px-4 bg-transparent">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12">
-                    <h1 className="text-3xl md:text-4xl font-medium text-slate-600 dark:text-gray-300 text-center ">Satisfacemos tus <br></br>necesidades de transporte <br></br>marítimo</h1>
+                    <h1 className="text-3xl md:text-4xl font-semibold text-neutral-900 dark:text-white mb-4 text-center">Satisfacemos tus <br></br>necesidades de<span className="text-lime-500"> transporte <br></br>marítimo</span></h1>
                     <p className="text-slate-600 dark:text-gray-300 mt-2 text-center max-w-2xl mx-auto pt-5">En GlobalNexTrading, nos consolidamos como su socio estratégico integral, ofreciendo soluciones de logística y comercio internacional diseñadas a medida para impulsar el crecimiento específico de su negocio. Gracias a nuestra red global, versatilidad multimodal y una gestión eficiente de recursos, garantizamos un servicio profesional y confiable que asegura el movimiento seguro y oportuno de sus mercancías en cualquier parte del mundo.</p>
                 </div>
 
@@ -87,7 +87,7 @@ export default function Vision() {
                             key={index}
                             className="min-w-[300px] md:min-w-[380px] snap-center hover:shadow-lg transition-shadow duration-300 ease-in-out "
                         >
-                            <div className="group dark:bg-gray-900 dark:border-lime-900 rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                            <div className="group dark:bg-transparent rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden cursor-pointer">
                                 <div className="aspect-video overflow-hidden">
                                     <img
                                         className="w-full h-full object-cover"
@@ -108,18 +108,18 @@ export default function Vision() {
                 <div className="flex items-center justify-center gap-4 mt-8">
                     <button
                         onClick={() => scroll('izq')}
-                        className="p-3 rounded-full bg-white border border-slate-200 shadow-sm hover:bg-indigo-600 hover:text-white transition-all"
+                        className="p-3 rounded-full bg-white dark:bg-transparent border border-slate-200 dark:border-gray-800 shadow-sm hover:bg-gray-800 hover:text-white transition-all"
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 dark:text-lime-600 hover:dark:text-lime-400">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                         </svg>
                     </button>
 
                     <button
                         onClick={() => scroll('der')}
-                        className="p-3 rounded-full bg-white border border-slate-200 shadow-sm hover:bg-indigo-600 hover:text-white transition-all"
+                        className="p-3 rounded-full bg-white dark:bg-transparent border border-slate-200 dark:border-gray-800 shadow-sm hover:bg-gray-800 hover:text-white transition-all"
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 dark:text-lime-600 hover:dark:text-lime-400">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>
                     </button>

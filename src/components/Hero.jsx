@@ -68,13 +68,17 @@ function Hero() {
                         Somos una empresa venezolana con ADN global. Nos especializamos en la comercialización, distribución, almacenamiento, importación y exportación de una amplia gama de productos, conectando la producción nacional con mercados internacionales y viceversa.
                     </motion.p>
                     <div class="flex flex-wrap justify-center items-center gap-4 md:gap-14 mt-5">
-                        <p class="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check size-5 text-lime-400"><path d="M20 6 9 17l-5-5" /></svg>
-                            <span className="text-slate-400">No credit card</span>
-                        </p>
-                        <p class="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check size-5 text-lime-400"><path d="M20 6 9 17l-5-5" /></svg>
-                            <span className="text-slate-400">30 days free trial</span>
+                     <p className="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-lime-400">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <span className="text-slate-300 font-medium text-sm">Operaciones Certificadas</span>
+    </p>
+                       <p className="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-lime-400">
+                         <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+                        </svg>
+                            <span className="text-slate-300 font-medium text-sm">Logística Puerta a Puerta</span>
                         </p>
                     </div>
 

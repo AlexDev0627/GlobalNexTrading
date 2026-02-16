@@ -48,14 +48,14 @@ function Home() {
                 </ScrollVariant>
                 <Mision />
                 <Vision />
+                <Features />
                 <ScrollVariant>
                     <Cta />
                 </ScrollVariant>
                 <ScrollVariant variant="right">
                     <Partners />
                 </ScrollVariant>
-                <Features />
-                <FAQ />
+                {/* <FAQ /> */}
                 <ScrollVariant>
                     <Testimonial />
                 </ScrollVariant>

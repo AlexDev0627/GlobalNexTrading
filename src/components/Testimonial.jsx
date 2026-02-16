@@ -62,8 +62,8 @@ const Testimonial = () => {
                         <div className="inline-block bg-neutral-100 border border-lime-400 rounded-full px-4 py-1 mb-3">
                             <span className="text-xs text-neutral-600">Loved by clients</span>
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-medium text-neutral-900 dark:text-white mb-4">
-                            ¿Qué dicen sobre Global Next Trading?
+                        <h2 className="text-3xl md:text-4xl font-semibold text-neutral-900 dark:text-white mb-4">
+                            ¿Qué dicen sobre <span className="text-lime-500">Global Next Trading</span>?
                         </h2>
                         <p className="text-neutral-600 text-sm max-w-96 mx-auto dark:text-gray-400">
                             Comentarios reales de fundadores, desarrolladores y equipos que crean productos listos para producción.

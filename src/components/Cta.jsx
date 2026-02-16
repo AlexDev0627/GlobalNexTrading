@@ -1,62 +1,81 @@
-export default  () => {
-    const featuresData = [
+export default () => {
+    const servicesData = [
         {
-            icon: <svg className='text-slate-800 dark:text-white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg>,
-            title: "Task Automation",
-            description: "Let AI handle the repetitive, time-consuming tasks so your team can stay focused on business growth."
+            // Icono: Barco de carga
+            icon: <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /><path d="M19.38 20L21 7l-9-4-9 4 1.62 13" /><path d="M12 3v17" /><path d="M12 7h7" /><path d="M5 7h7" /></svg>,
+            title: "Flete Marítimo Internacional",
+            description: "Conexiones globales con las principales navieras para transporte de contenedores completos (FCL)."
         },
         {
-            icon: <svg className='text-slate-800 dark:text-white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5" /><path d="M12 7v5l4 2" /></svg>,
-            title: "Real-Time Monitoring",
-            description: "Empower your business by letting AI take over repetitive tasks and freeing your team for high impact work."
+            // Icono: Caja/Paquete (Consolidado)
+            icon: <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /><path d="m3.3 7 8.7 5 8.7-5" /><path d="M12 22V12" /></svg>,
+            title: "Carga Consolidada (LCL)",
+            description: "Optimiza costos enviando volúmenes menores compartiendo espacio en contenedor de forma segura."
         },
         {
-            icon: <svg className ='text-slate-800 dark:text-white' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 7.9999C20.9996 7.64918 20.9071 7.30471 20.7315 7.00106C20.556 6.69742 20.3037 6.44526 20 6.2699L13 2.2699C12.696 2.09437 12.3511 2.00195 12 2.00195C11.6489 2.00195 11.304 2.09437 11 2.2699L4 6.2699C3.69626 6.44526 3.44398 6.69742 3.26846 7.00106C3.09294 7.30471 3.00036 7.64918 3 7.9999V15.9999C3.00036 16.3506 3.09294 16.6951 3.26846 16.9987C3.44398 17.3024 3.69626 17.5545 4 17.7299L11 21.7299C11.304 21.9054 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9054 13 21.7299L20 17.7299C20.3037 17.5545 20.556 17.3024 20.7315 16.9987C20.9071 16.6951 20.9996 16.3506 21 15.9999V7.9999Z" stroke="black   " strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /><path d="M3.29999 7L12 12L20.7 7" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /><path d="M12 22V12" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>,
-            title: "Context Awareness",
-            description: "AI takes care of the repetitive stuff, so your team can focus on growth and delivering results that matter."
+            // Icono: Ancla (Gestión Aduanera)
+            icon: <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="5" r="3" /><path d="M12 8v10" /><path d="M12 18H7a3 3 0 0 1-3-3" /><path d="M12 18h5a3 3 0 0 0 3-3" /><path d="M6 13H2" /><path d="M22 13h-4" /></svg>,
+            title: "Agenciamiento Aduanal",
+            description: "Gestión experta en trámites de nacionalización y despacho para evitar demoras en puerto."
         },
         {
-            icon: <svg className='text-slate-800 dark:text-white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5V19A9 3 0 0 0 21 19V5" /><path d="M3 12A9 3 0 0 0 21 12" /></svg>,
-            title: "Resource Optimization",
-            description: "Empower your business by letting AI take over repetitive tasks and freeing team for high impact work."
+            // Icono: Escudo (Seguro)
+            icon: <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" /></svg>,
+            title: "Seguro de Mercancía",
+            description: "Cobertura integral contra riesgos marítimos, garantizando la protección de tu capital."
         },
         {
-            icon: <svg className='text-slate-800 dark:text-white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><path d="M16 3.128a4 4 0 0 1 0 7.744" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><circle cx="9" cy="7" r="4" /></svg>,
-            title: "Role-Based Access",
-            description: "Free your team from manual, repetitive work. Let AI automate the busywork while you focus on scaling."
+            // Icono: Globo (Rutas)
+            icon: <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /><path d="M2 12h20" /></svg>,
+            title: "Logística Multimodal",
+            description: "Planificación de rutas puerta a puerta combinando transporte terrestre y marítimo."
         },
         {
-            icon: <svg className='text-slate-800 dark:text-white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1" /><path d="m12 15 5 6H7Z" /></svg>,
-            title: "AI-Agent Collaboration",
-            description: "Let AI handle the repetitive, time-consuming tasks so your team can stay focused on business growth."
+            // Icono: Portapapeles (Asesoría)
+            icon: <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" ry="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="M12 11h4" /><path d="M12 16h4" /><path d="M8 11h.01" /><path d="M8 16h.01" /></svg>,
+            title: "Asesoría en Comercio Exterior",
+            description: "Consultoría técnica sobre normativas Incoterms y optimización de costos logísticos."
         }
     ];
 
     return (
-        <>
-        
-            <style>
-                {`@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        <section className="py-24 px-6 bg-white dark:bg-transparent">
+            <div className="max-w-7xl mx-auto">
+                {/* Cabecera */}
+                <div className="flex flex-col items-center mb-16 text-center">
+                    <span className="mb-4 px-4 py-1.5 rounded-full border border-lime-500/30 bg-lime-500/10 text-lime-600 dark:text-lime-400 text-xs font-bold uppercase tracking-widest">
+                        Expertos en Logística
+                    </span>
+                    <h2 className="text-3xl md:text-4xl font-semibold text-neutral-900 dark:text-white mb-4">
+                        Servicios de <span className="text-lime-500">Carga Marítima</span>
+                    </h2>
+                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+                        Soluciones integrales de transporte internacional diseñadas para llevar tu mercancía con seguridad y eficiencia a cualquier puerto del mundo.
+                    </p>
+                </div>
 
-                * {
-                    font-family: "Poppins", sans-serif;
-                }`}
-            </style>
-                    
-            <section className="pt-70 px-4  flex flex-col justify-center items-center gap-6">
-                <button className='px-4 h-8 border border-lime-400 text-slate-800 dark:text-lime-400 text-xs rounded-lg'>Features</button>
-                <h2 className="text-3xl md:text-[40px]/12 font-medium text-slate-800 dark:text-gray-200 max-w-lg text-center leading-tight">Nuestros Servicios</h2>
-                <p className='text-base/7 text-slate-800 dark:text-white max-w-xl text-center'>Ofrecemos un ecosistema de soluciones diseñado para cubrir cada necesidad de tu negocio</p>
-                <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                    {featuresData.map((feature, index) => (
-                        <div key={index} className='bg-slate-1 border border-gray-700 rounded-lg p-6 space-y-3 hover:-translate-y-2 transition duration-300 ease-in-out'>
-                            {feature.icon}
-                            <p className='font-medium text-lg text-slate-800 dark:text-gray-200 '>{feature.title}</p>
-                            <p className='text-sm/5 text-slate-800 dark:text-gray-200'>{feature.description}</p>
+                {/* Grid de Servicios */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {servicesData.map((service, index) => (
+                        <div key={index} 
+                             className="group relative bg-slate-50 dark:bg-transparent border border-slate-200 dark:border-slate-800 rounded-2xl p-8 transition-all duration-300 hover:shadow-xl hover:shadow-lime-500/5 hover:-translate-y-1 hover:border-lime-500/50">
+                            
+                            {/* Icon Container */}
+                            <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white dark:bg-slate-800 text-lime-600 dark:text-lime-400 mb-6 shadow-sm group-hover:bg-lime-500 group-hover:text-white transition-colors duration-300">
+                                {service.icon}
+                            </div>
+
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
+                                {service.title}
+                            </h3>
+                            
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                                {service.description}
+                            </p>
                         </div>
                     ))}
                 </div>
-            </section>
-        </>
-    )
-}
+            </div>
+        </section>
+    );
+};
