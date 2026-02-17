@@ -1,93 +1,132 @@
 const Testimonial = () => {
     const cardsData = [
         {
-            image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200',
-            name: 'Briar Martin',
-            handle: '@neilstellar',
+            image: './ricardo.png',
+            name: 'Ricardo Méndez',
+            role: 'Director de Operaciones',
+            content: 'Excelente gestión en el flete marítimo desde China. La carga llegó en el tiempo estipulado y sin contratiempos aduaneros.',
         },
         {
-            image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200',
-            name: 'Avery Johnson',
-            handle: '@averywrites',
+            image: './carlos.png',
+            name: 'Carlos Rodríguez',
+            role: 'Exportador de Alimentos',
+            content: 'Global Next Trading ha sido clave para nuestra expansión. Su logística de cadena de frío es impecable y muy confiable.',
         },
         {
-            image: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&auto=format&fit=crop&q=60',
-            name: 'Jordan Lee',
-            handle: '@jordantalks',
+            image: './andres.png',
+            name: 'Andrés Salazar',
+            role: 'Gerente de Suministros',
+            content: 'El servicio puerta a puerta simplificó nuestras importaciones. Una transparencia total en los costos y seguimiento de carga.',
         },
         {
-            image: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&auto=format&fit=crop&q=60',
-            name: 'Avery Johnson',
-            handle: '@averywrites',
+            image: './elena.png',
+            name: 'Elena Espinoza',
+            role: 'Distribuidora Minorista',
+            content: 'La mejor atención personalizada en Venezuela. Entienden perfectamente los retos logísticos actuales y ofrecen soluciones reales.',
         },
+        {
+            image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200&h=200',
+            name: 'Alejandro Vargas',
+            role: 'Director de Operaciones - TecnoImport',
+            content: 'La gestión aduanera de Global Next Trading es impecable. Redujeron nuestros tiempos de desaduanamiento en un 40% en puerto.',
+    },
+    {
+        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200',
+        name: 'Sofía Beltrán',
+        role: 'Gerente de Exportaciones - Agrícola del Sur',
+        content: 'Confianza absoluta en su cadena de frío. Nuestros productos perecederos llegan a Europa con la frescura garantizada.',
+    },
+    {
+        image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200',
+        name: 'Marco Ferrero',
+        role: 'Supply Chain Manager - InduMaq',
+        content: 'Soluciones logísticas puerta a puerta de alto nivel. La transparencia en el tracking de carga pesada es lo que buscábamos.',
+    }
+
     ];
 
     const CreateCard = ({ card }) => (
-        <div className="p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0 ">
+        <div className=" cursor-pointer px-4 pt-4 pb-3 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0 bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800">
             <div className="flex gap-2">
-                <img className="size-11 rounded-full" src={card.image} alt="User Image" />
+                <img className="size-11 rounded-full object-cover" src={card.image} alt={card.name} />
                 <div className="flex flex-col">
                     <div className="flex items-center gap-1">
-                        <p className="dark:text-white">{card.name}</p>
-                        <svg className="mt-0.5 fill-blue-500" width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" />
-                        </svg>
+                        <p className="dark:text-white font-medium text-sm">{card.name}</p>
                     </div>
-                    <span className="text-xs text-gray-400">{card.handle}</span>
+                    {/* Estrellas de Puntuación */}
+                    <div className="flex gap-0.5">
+                        {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-3 h-3 fill-yellow-400" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        ))}
+                    </div>
                 </div>
             </div>
-            <p className="text-sm py-4 text-gray-800 dark:text-gray-400">Radiant made undercutting all of our competitors an absolute breeze.</p>
+            <p className="text-sm py-4 text-gray-800 dark:text-gray-400 italic">"{card.content}"</p>
+            <span className="text-[10px] uppercase tracking-widest text-slate-800 dark:text-lime-400 font-bold">{card.role}</span>
         </div>
     );
 
     return (
         <>
             <style>{`
-            @keyframes marqueeScroll {
-                0% { transform: translateX(0%); }
-                100% { transform: translateX(-50%); }
-            }
+                @keyframes marqueeScroll {
+                    from { transform: translateX(0); }
+                    to { transform: translateX(-50%); }
+                }
 
-            .marquee-inner {
-                animation: marqueeScroll 50s linear infinite;
-            }
+                .marquee-inner {
+                    display: flex;
+                    width: max-content; 
+                    animation: marqueeScroll 80s linear infinite;
+                }
 
-            .marquee-reverse {
-                animation-direction: reverse;
-            }
-        `}</style>
+                .marquee-reverse {
+                    animation-direction: reverse;
+                }
 
-            <div className="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative">
+                .marquee-row:hover .marquee-inner {
+                    // animation-play-state: paused;
+                }
+            `}</style>
+
+
+            <div className="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative mt-40 mb-20">
                 <div className="text-center mb-8">
-                        <div className="inline-block bg-neutral-100 border border-lime-400 rounded-full px-4 py-1 mb-3">
-                            <span className="text-xs text-neutral-600">Loved by clients</span>
+                        <div className="cursor-pointer inline-block bg-neutral-100 border border-lime-400 rounded-full px-4 py-1 mb-3 dark:bg-neutral-900">
+                            <span className="text-xs text-neutral-600 dark:text-neutral-400">Casos de Éxito</span>
                         </div>
-                        <h2 className="text-3xl md:text-4xl font-semibold text-neutral-900 dark:text-white mb-4">
-                            ¿Qué dicen sobre <span className="text-lime-500">Global Next Trading</span>?
+                        <h2 className="text-3xl md:text-4xl font-semibold text-neutral-900 dark:text-gray-300 mb-4">
+                            ¿Qué dicen sobre <br></br><span className="text-lime-500">Global Next Trading</span>?
                         </h2>
-                        <p className="text-neutral-600 text-sm max-w-96 mx-auto dark:text-gray-400">
-                            Comentarios reales de fundadores, desarrolladores y equipos que crean productos listos para producción.
+                        <p className="text-center text-lg text-slate-600 dark:text-slate-400 max-w-2xl max-w-md m-auto">
+                            Empresas y directivos que confían en nuestra ingeniería logística para sus operaciones internacionales.
                         </p>
                     </div>
-                <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent dark:bg-gradient-to-r dark:from-black dark:to-transparent"></div>
+                
+                {/* Gradientes laterales para suavizar el scroll */}
+                <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent dark:from-black"></div>
+                
                 <div className="marquee-inner flex transform-gpu min-w-[200%] pt-10 pb-5">
                     {[...cardsData, ...cardsData].map((card, index) => (
                         <CreateCard key={index} card={card} />
                     ))}
                 </div>
-                <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent dark:bg-gradient-to-l dark:from-black dark:to-transparent"></div>
+                
+                <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent dark:from-black"></div>
             </div>
 
-            <div className="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative">
-                <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent dark:bg-gradient-to-r dark:from-black dark:to-tranparent"></div>
+            <div className="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative pb-20">
+                <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent dark:from-black"></div>
                 <div className="marquee-inner marquee-reverse flex transform-gpu min-w-[200%] pt-10 pb-5">
                     {[...cardsData, ...cardsData].map((card, index) => (
                         <CreateCard key={index} card={card} />
                     ))}
                 </div>
-                <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent dark:bg-gradient-to-l dark:from-black dark:to-transparent"></div>
+                <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent dark:from-black"></div>
             </div>
         </>
     )
 }
-export default Testimonial; 
+export default Testimonial;

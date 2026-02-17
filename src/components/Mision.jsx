@@ -1,20 +1,39 @@
 import { motion } from 'framer-motion';
 
-const Mision = () => {
+const Mision = ({
+     titlePrefix = "",
+     imageSrc = "./pic4.jpg",
+     des="",
+     reverse = false,
+     marginTop=""
+}) => {
+    
+       
     return (
-        // Envolvemos todo en un Fragment <> </> para que React no de error
+        
         <>
-            <section className="overflow-hidden bg-transparent sm:grid sm:grid-cols-2 sm:items-center pt-40 pb-20">
-                <div className="p-8 md:p-12 lg:px-16 lg:py-24">
+            <section className={`overflow-hidden bg-transparent sm:grid sm:grid-cols-2 sm:items-center pt-40 pb-20 ${marginTop}`}>
+                <motion.img
+                    initial={{ opacity: 0, x: reverse ? -50 : 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }} // Reduje un poco el delay para que sea más fluido
+                    alt="Misión Global Nex Trading"
+                    src={imageSrc}
+                    className={`h-64 w-full object-cover sm:h-[calc(100%-2rem)] shadow-2xl ${reverse ? 'sm:order-1' : 'sm:order-2'}`}
+                />
+                <div className={`p-8 md:p-12 lg:px-16 lg:py-24 ${reverse ? 'sm:order-2' : 'sm:order-1'}`}>
+                    
                     <div className="mx-auto max-w-xl text-center sm:text-left">
+                        
                         <motion.h2
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            className="text-2xl font-bold md:text-3xl text-slate-800 dark:text-white"
+                            className="text-3xl md:text-4xl font-semibold text-neutral-900 dark:text-gray-300 mb-4"
                         >
-                            ¿Está listo para hacer <span className="text-lime-500">crecer</span> su <span className="text-lime-500">negocio?</span>
+                           {titlePrefix}
                         </motion.h2>
 
                         <motion.p
@@ -22,22 +41,15 @@ const Mision = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.4 }}
-                            className="text-slate-800 dark:text-white md:mt-4 block" // Quité el 'hidden' para que se vea siempre
+                            className=" text-lg text-slate-600 dark:text-slate-400 max-w-md sm:max-w-3xl flex m-auto" // Quité el 'hidden' para que se vea siempre
                         >
-                            Facilitar el crecimiento de nuestros aliados comerciales a través de soluciones logísticas integrales y servicios de comercialización de alta calidad, conectando eficientemente a Venezuela con el resto del mundo mediante procesos transparentes, innovadores y seguros.
+                            {des}
                         </motion.p>
+                        
                     </div>
                 </div>
 
-                <motion.img
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }} // Reduje un poco el delay para que sea más fluido
-                    alt="Misión Global Nex Trading"
-                    src="pic3.png"
-                    className="h-64 w-full object-cover sm:h-[calc(100%-2rem)]  shadow-2xl"
-                />
+                
             </section>
 
             <div className="flex items-center px-6 md:px-12 py-10">
@@ -54,6 +66,7 @@ const Mision = () => {
             </div>
         </>
     );
+
 }
 
 export default Mision;

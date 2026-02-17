@@ -39,20 +39,25 @@ export default () => {
     ];
 
     return (
-        <section className="py-24 px-6 bg-white dark:bg-transparent">
+        <section className="py-40 px-6 bg-white dark:bg-transparent">
             <div className="max-w-7xl mx-auto">
                 {/* Cabecera */}
                 <div className="flex flex-col items-center mb-16 text-center">
-                    <span className="mb-4 px-4 py-1.5 rounded-full border border-lime-500/30 bg-lime-500/10 text-lime-600 dark:text-lime-400 text-xs font-bold uppercase tracking-widest">
-                        Expertos en Logística
-                    </span>
-                    <h2 className="text-3xl md:text-4xl font-semibold text-neutral-900 dark:text-white mb-4">
-                        Servicios de <span className="text-lime-500">Carga Marítima</span>
+                        <div className="cursor-pointer inline-block bg-neutral-100 border border-lime-400 rounded-full px-4 py-1 mb-3 dark:bg-neutral-900">
+                            <span className="text-xs text-neutral-600 dark:text-neutral-400">Expertos en logistica</span>
+                        </div>
+                    <h2 className="text-3xl md:text-4xl font-semibold text-neutral-900 dark:text-gray-300 mb-4">
+                        Servicios de <span className="text-lime-500">Carga <br />Marítima</span>
                     </h2>
-                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-sm sm:max-w-3xl leading-relaxed">
                         Soluciones integrales de transporte internacional diseñadas para llevar tu mercancía con seguridad y eficiencia a cualquier puerto del mundo.
                     </p>
                 </div>
+                {/* Gradiente suave al hacer scroll */}
+                {/* <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent dark:from-black"></div>
+                <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent dark:from-black"></div>
+                */}
+                {/*  */}
 
                 {/* Grid de Servicios */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

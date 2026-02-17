@@ -34,10 +34,10 @@ export default function NavBar() {
     }, [darkMode]);
 
     const navigation = [
-        { name: 'Inicio', href: '#' },
-        { name: 'Servicios', href: '#' },
-        { name: 'Sobre Nosotros', href: '#' },
-        { name: 'Contacto', href: '#' },
+        { name: 'Inicio', href: '/' },
+        { name: 'Servicios', href: '/services' },
+        { name: 'Nosotros', href: '/about' },
+        { name: 'Contacto', href: '/contact' },
     ]
 
     return (

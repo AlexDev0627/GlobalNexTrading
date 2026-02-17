@@ -33,27 +33,37 @@ function Home() {
      `}}
             />
 
-            {/* <div
-                className="fixed inset-0 z-0 pointer-events-none transition-opacity duration-700 ease-in-out opacity-100  dark:opacity-1"
-                style={{
-                    background: "radial-gradient(125% 125% at 50% 10%, #fff 40%, #475569 100%)",
-                }}
-            /> */}
+           
 
             <div className="relative z-10">
                 {/* <NavBar /> */}
-                <Hero />
+                <Hero 
+                images={['./pic1.jpg',
+    './pic2.jpg',
+    './pic3.png',
+    './pic4.jpg',
+    './pic5.jpg',
+    './pic6.jpg',
+    './pic7.jpg']}
+
+    gradientText="Global Next Trading"
+    titlePrefix="El socio estratégico para un mundo sin fronteras"
+    description="Somos una empresa venezolana con ADN global. Nos especializamos en la comercialización, distribución, almacenamiento, importación y exportación de una amplia gama de productos, conectando la producción nacional con mercados internacionales y viceversa."/>
+                
                 <ScrollVariant>
                     <Marquee />
                 </ScrollVariant>
-                <Mision />
+                <Mision 
+                    titlePrefix={ <>
+                    ¿Está listo para hacer <span className="text-lime-500">crecer</span> su <span className="text-lime-500">negocio?</span>
+                    </>}
+                />
+                <ScrollVariant>
                 <Vision />
+                </ScrollVariant>
                 <Features />
                 <ScrollVariant>
                     <Cta />
-                </ScrollVariant>
-                <ScrollVariant variant="right">
-                    <Partners />
                 </ScrollVariant>
                 {/* <FAQ /> */}
                 <ScrollVariant>

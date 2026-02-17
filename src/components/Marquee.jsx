@@ -14,8 +14,8 @@ export default function Marquee() {
     ];
 
     return (
-        <>
-            <h2 className="text-3xl md:text-4xl font-medium text-slate-600 dark:text-gray-300 text-center my-30">Con la confianza de las empresas <br /><span className="text-lime-400">líderes del mundo</span></h2>
+        <div className="py-40">
+            <h2 className="text-3xl md:text-4xl font-medium text-slate-600 dark:text-gray-300 text-center ">Con la confianza de las empresas <br /><span className="text-lime-400">líderes del mundo</span></h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-16 w-max mx-auto">
                 <div className="hover:bg-transparent h-16 w-44 sm:w-60 sm:h-20 border border-slate-200 dark:border-gray-900 border-t-0 border-l-0"></div>
                 <div className="hover:bg-transparent h-16 w-44 sm:w-60 sm:h-20 border border-slate-200 dark:border-gray-900 border-t-0 border-x-0 md:border-r"></div>
@@ -52,6 +52,6 @@ export default function Marquee() {
                 <div className="hover:bg-transparent h-16 w-44 sm:w-60 sm:h-20 border border-slate-200 dark:border-gray-900 border-x-0 border-y-0 border-r xl:border-r-0"></div>
                 <div className="hover:bg-transparent h-16 w-44 sm:w-60 sm:h-20 border border-slate-200 dark:border-gray-900 border-x-0 border-y-0 xl:border-l"></div>
             </div>
-        </>
+        </div>
     );
 };

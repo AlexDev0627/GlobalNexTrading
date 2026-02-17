@@ -29,9 +29,9 @@ export default function Button() {
             initial={{opacity:0, x:-50}}
             animate={{opacity:1, x:0, ease:"linear"}}
             transition={{duration:0.9, delay:1.5}}
-            className="rainbow relative z-0 bg-transparent overflow-hidden p-0.5 flex items-center justify-center rounded-full hover:scale-105 transition duration-300 active:scale-100 w-fit">
-                <button className="px-8 text-sm py-3 text-white rounded-full font-medium bg-slate-900 dark:bg-gray-900/80 backdrop-blur">
-                    Servicios
+            className="rainbow relative z-0 bg-transparent overflow-hidden p-0.5 flex items-center justify-center rounded-full hover:scale-100 hover:bg-slate-600/80 transition duration-300 active:scale-100 w-fit">
+                <button className="px-8 text-sm py-3 text-white rounded-full font-medium bg-slate-900 dark:bg-gray-900/80 backdrop-blur cursor-pointer">
+                    Solicitar Cotización
                 </button>
             </motion.div>
         </>
