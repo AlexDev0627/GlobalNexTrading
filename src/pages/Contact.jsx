@@ -1,3 +1,5 @@
+import Form from '../components/Form.jsx';
+import Footer from '../components/Footer.jsx';
 const Contact =()=>{
     return(
         <div className="relative min-h-screen w-full bg-white dark:bg-black transition-colors duration-700 overflow-x-hidden">
@@ -23,8 +25,8 @@ const Contact =()=>{
                 <h1 className="text-4xl font-bold text-center mt-20 text-lime-400 dark:text-gray-200">Contacto</h1>
                 <p className="text-center mt-4 text-gray-600 dark:text-gray-400">Ofrecemos una amplia gama de servicios para satisfacer tus necesidades financieras.</p>
 
-
-
+                <Form />
+                <Footer />
 
             </div>
        </div>

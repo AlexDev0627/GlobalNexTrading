@@ -2,7 +2,7 @@ export default function Form() {
     return (
         <>
             
-            <section className='relative bg-transparent flex flex-col md:flex-row justify-center px-4 py-20 '>
+            <section className='relative bg-transparent flex flex-col md:flex-row justify-center px-4 pt-40 pb-50 '>
                 
                 {/* <div className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none mb-10 size-140 bg-green-500/35 rounded-full blur-[200px]'></div> */}
                 

@@ -4,6 +4,12 @@ import Footer from '../components/Footer.jsx'
 import FAQ from '../components/FAQ.jsx'
 import Form from '../components/Form.jsx'
 import Mision from '../components/Mision.jsx'
+import Marquee from '../components/Marquee.jsx';
+import ScrollVariant from "../components/ui/ScrollVariant"
+
+
+
+
 const About =()=>{
     return(
         <div className="relative min-h-screen w-full bg-white dark:bg-black transition-colors duration-700 overflow-x-hidden">
@@ -27,8 +33,8 @@ const About =()=>{
 
             <div className="relative z-10 pt-10">
                 <Hero 
-                titleMargin="mb-80"
-                height="h-[70vh]"
+                titleMargin="mb-60"
+                height="sm:h-[70vh]"
                 showIcons = {false}
                 images={['./pic4.jpg','./pic5.jpg','./pic6.jpg','./pic7.jpg']}
                 // gradientText=""
@@ -42,8 +48,12 @@ const About =()=>{
                 description="En Global Next Trading, somos una empresa venezolana con ADN global. Nos especializamos en la comercialización, distribución, almacenamiento, importación y exportación de una amplia gama de productos, conectando la producción nacional con mercados internacionales y viceversa.
 Con años de experiencia en el sector del comercio exterior, entendemos que la logística no se trata solo de mover mercancía, sino de mover oportunidades. Nuestra presencia internacional nos permite ofrecer soluciones integrales que simplifican la complejidad del intercambio comercial, garantizando eficiencia y seguridad en cada etapa de la cadena de suministro."/>
 
+                <ScrollVariant>
+                <Marquee />
+                </ScrollVariant>
+
                 <Mision 
-                marginTop="mt-40"
+                marginTop="mt-0"
                 
                 reverse = {true}
                 titlePrefix={
@@ -55,7 +65,7 @@ Con años de experiencia en el sector del comercio exterior, entendemos que la l
 
                 <Mision 
                 imageSrc="./pic7.jpg"
-                marginTop="mt-20"
+                marginTop="mt-0"
                 reverse = {false}
                 titlePrefix={
                     <>
