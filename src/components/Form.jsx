@@ -1,11 +1,11 @@
 export default function Form() {
     return (
         <>
-            
+
             <section className='relative bg-transparent flex flex-col md:flex-row justify-center px-4 pt-40 pb-50 '>
-                
+
                 {/* <div className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none mb-10 size-140 bg-green-500/35 rounded-full blur-[200px]'></div> */}
-                
+
                 <div className='text-center md:text-left mt-12'>
                     <div className="flex items-center  p-1.5 rounded-full border border-green-900 text-xs w-fit mx-auto md:mx-0">
                         <div className="flex items-center">
@@ -15,42 +15,42 @@ export default function Form() {
                         </div>
                         <p className="-translate-x-2 text-xs text-slate-200">Conviertete en uno de nuestros 2k+ clientes </p>
                     </div>
-                    <h1 className='font-medium text-3xl md:text-5xl/15 bg-linear-to-r max-md:mx-auto from-white to-green-300 bg-clip-text text-transparent max-w-[470px] mt-4'>Ready to Transform Your Digital Experience?</h1>
-                    <p className='text-sm/6 text-white max-w-[345px] mt-4 mx-auto md:mx-0'>Let our design team craft a website that elevates your brand. Book a free session today.</p> 
+                    <h1 className='font-medium text-3xl md:text-5xl bg-linear-to-r max-md:mx-auto from-white to-green-300 bg-clip-text text-transparent max-w-[470px] mt-4'>¿Listo para Transformar tu Experiencia Digital?</h1>
+                    <p className='text-sm/6 text-white max-w-[345px] mt-4 mx-auto md:mx-0'>Permita que nuestro equipo de diseño cree un sitio web que eleve su marca. Reserve una sesión gratuita hoy mismo.</p>
                 </div>
-                        
+
                 <div className='w-full max-w-lg max-md:mx-auto bg-[#00A63E]/0 backdrop-blur-sm border border-white/10 rounded-xl p-8'>
                     <form className='space-y-6'>
                         <div>
                             <label className='block text-white text-sm mb-2'>Nombre</label>
-                            <input 
-                                type="text" 
+                            <input
+                                type="text"
                                 required
-                                placeholder="Escribe tu nombre aquí..." 
+                                placeholder="Escribe tu nombre aquí..."
                                 className='w-full bg-[#00A63E]/5 border border-white/20 rounded-lg px-4 py-3 text-white/40 placeholder:text-white/40 placeholder:text-sm focus:outline-none focus:border-green-600 transition'
                             />
                         </div>
-            
+
                         <div>
                             <label className='block text-white text-sm mb-2'>Email</label>
-                            <input 
-                                type="email" 
+                            <input
+                                type="email"
                                 required
-                                placeholder="ejemplo@gmail.com" 
+                                placeholder="ejemplo@gmail.com"
                                 className='w-full bg-[#00A63E]/5 border border-white/20 rounded-lg px-4 py-3 text-white/40 placeholder:text-white/40 placeholder:text-sm focus:outline-none focus:border-green-600 transition'
                             />
                         </div>
-            
+
                         <div>
                             <label className='block text-white text-sm mb-2'>Mensaje</label>
-                            <textarea 
-                                placeholder="Escribe tu mensaje aquí..." 
+                            <textarea
+                                placeholder="Escribe tu mensaje aquí..."
                                 rows="4"
                                 required
                                 className='w-full bg-[#00A63E]/5 border border-white/20 rounded-lg px-4 py-3 text-white/40 placeholder:text-white/40 placeholder:text-sm focus:outline-none focus:border-green-600 transition resize-none'
                             ></textarea>
                         </div>
-            
+
                         <div className='flex items-center justify-between'>
                             <p className='text-xs md:text-sm text-white/60 max-w-3xs'>
                                 Al enviar este formulario, aceptas nuestra <a href="" className='text-green-400 hover:underline'>Política de Privacidad</a>.

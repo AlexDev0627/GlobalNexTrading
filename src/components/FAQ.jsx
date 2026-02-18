@@ -31,7 +31,7 @@ const Faq = () => {
             `}</style>
             <div className="max-w-xl mx-auto flex flex-col items-center justify-center px-4 md:px-0 py-40">
                 <p className="text-lime-400 text-sm font-medium">FAQ's</p>
-                <h1 className="text-3xl font-semibold text-center dark:text-white">Preguntas Frecuentes</h1>
+                <h1 className="text-3xl font-medium text-center dark:text-white">Preguntas Frecuentes</h1>
                 <p className="text-sm text-slate-500 mt-2 pb-8 text-center dark:text-white">
                     Ship Beautiful Frontends Without the Overhead — Customizable, Scalable and Developer-Friendly UI Components.
                 </p>

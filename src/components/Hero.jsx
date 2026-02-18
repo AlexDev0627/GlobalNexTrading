@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import GradientText from './ui/GradientText';
 
 // Recibimos props para personalizar el contenido
-const HeroSection = ({ 
-    images = [], 
-    titleMargin="",
-    titlePrefix = "", 
-    gradientText = "", 
-    description = "", 
+const HeroSection = ({
+    images = [],
+    titleMargin = "",
+    titlePrefix = "",
+    gradientText = "",
+    description = "",
     showIcons = true,
     height = "min-h-screen",
     overlayOpacity = "bg-black/70"
@@ -40,22 +40,22 @@ const HeroSection = ({
 
             <div className={`absolute inset-0 z-1 ${overlayOpacity} pointer-events-none`} />
 
-            <main className="relative z-10 flex h-full min-h-screen flex-col md:flex-row items-center justify-between py-60 px-4 md:px-16 lg:px-32">
+            <main className="relative z-10 flex h-full flex-col md:flex-row items-center justify-center md:justify-between pt-48 pb-32 px-4 md:px-16 lg:px-32">
                 <div className={`flex flex-col items-center md:items-start text-center md:text-left ${titleMargin}`}>
                     <motion.h1
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.9, delay: 0.3 }}
-                        className="text-4xl md:text-5xl lg:text-5xl font-semibold max-w-2xl text-gray-300 leading-tight">
-                            
+                        className="text-4xl md:text-5xl lg:text-5xl font-medium max-w-2xl text-gray-300 leading-tight">
+
                         <GradientText
                             colors={['#deff01', '#f1ff8a', '#96ce00']}
                             animationSpeed={8}
                             showBorder={false}
                         >
-                            {gradientText} 
+                            {gradientText}
                         </GradientText>
-                        
+
                         {titlePrefix}
                     </motion.h1>
 
@@ -84,7 +84,7 @@ const HeroSection = ({
 const IconLabel = ({ icon, text }) => (
     <p className="flex items-center gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-lime-400">
-            {icon === 'shield' ? <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/> : <><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></>}
+            {icon === 'shield' ? <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /> : <><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></>}
         </svg>
         <span className="text-slate-200 font-medium text-sm">{text}</span>
     </p>

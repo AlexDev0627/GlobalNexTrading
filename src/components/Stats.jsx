@@ -1,45 +1,87 @@
-export default () => {
+import { motion } from 'framer-motion';
 
+export default () => {
     const stats = [
         {
             data: "35K",
-            title: "Clientes"
+            title: "Clientes Activos"
         },
         {
             data: "40+",
-            title: "Paises"
+            title: "Países Conectados"
         },
         {
             data: "30M+",
-            title: "Entregas"
+            title: "Entregas Exitosas"
         },
     ]
 
     return (
-        <section className="py-40 dark:bg-transparent">
-            <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-                <div className="max-w-2xl mx-auto text-center">
-                    <h3 className="text-slate-800 dark:text-gray-300 text-3xl font-semibold sm:text-4xl mb-4">
-                        Confianza avalada por <br></br><span className="text-lime-500">nuestros clientes</span>
-                    </h3>
-                    <p className="text-center text-lg text-slate-600 dark:text-slate-400 max-w-xs md:max-w-lg flex m-auto">
-                        Más que mover carga, movemos tu negocio hacia el éxito global con seguridad, transparencia y puntualidad en cada ruta marítima.</p>
-                </div>
-                <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent dark:from-black"></div>
+        <section className="relative py-24 px-6 overflow-hidden bg-transparent">
+            <div className="max-w-7xl mx-auto">
+                {/* Cabecera coordinada */}
+                <div className="flex flex-col items-center mb-16 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="inline-block bg-lime-500/10 border border-lime-500/20 rounded-full px-4 py-1.5 mb-6"
+                    >
+                        <span className="text-[10px] font-medium tracking-[0.2em] text-lime-600 dark:text-lime-400 uppercase">Hitos de Global Nex</span>
+                    </motion.div>
 
-                <div className="mt-12">
-                    <ul className="flex flex-col gap-4 items-center justify-center sm:flex-row">
-                        {
-                            stats.map((item, idx) => (
-                                <li key={idx} className="w-full text-center px-12 py-4 rounded-lg sm:w-auto cursor-pointer bg-dark-200 dark:transparent border border-slate-200 dark:border-slate-900 hover:shadow-lg transition-shadow duration-300 ease-in-out">
-                                    <h4 className="text-4xl text-slate-800 dark:text-lime-400  font-semibold ">{item.data}</h4>
-                                    <p className="mt-3 text-slate-800 dark:text-white font-medium">{item.title}</p>
-                                </li>
-                            ))
-                        }
-                    </ul>
+                    <motion.h3
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-4xl md:text-5xl font-medium text-gray-900 dark:text-white mb-6 leading-tight tracking-tight"
+                    >
+                        Confianza que <br className="md:hidden" />
+                        <span className="text-lime-500 text-glow">Mueve el Mundo.</span>
+                    </motion.h3>
+
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="text-xl text-slate-600 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed"
+                    >
+                        Más que mover carga, movemos tu negocio hacia el éxito global con seguridad, transparencia y puntualidad en cada ruta.
+                    </motion.p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center justify-center">
+                    {stats.map((item, idx) => (
+                        <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.1, type: "spring", stiffness: 100 }}
+                            className="relative group flex flex-col items-center"
+                        >
+                            {/* Decoración de fondo para el número */}
+                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-24 bg-lime-500/5 blur-2xl rounded-full group-hover:bg-lime-500/10 transition-colors duration-500" />
+
+                            <h4 className="relative text-6xl md:text-7xl font-medium text-lime-500 dark:text-lime-400 mb-2 tracking-tighter">
+                                {item.data}
+                            </h4>
+
+                            <p className="text-lg text-gray-900 dark:text-white font-medium uppercase tracking-widest text-center">
+                                {item.title}
+                            </p>
+
+                            {/* Línea decorativa inferior */}
+                            <div className="w-12 h-1 bg-lime-500/20 rounded-full mt-4 group-hover:w-20 group-hover:bg-lime-500 transition-all duration-500" />
+                        </motion.div>
+                    ))}
                 </div>
             </div>
+
+            {/* Decoraciones de fondo sutiles */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-lime-500/[0.02] blur-[120px] rounded-full pointer-events-none z-0" />
         </section>
-    )
-}
+    );
+};

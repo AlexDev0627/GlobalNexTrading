@@ -8,9 +8,12 @@ import Contact from './pages/Contact'
 // Importa tus nuevas páginas aquí, por ejemplo:
 // import Contacto from './pages/Contacto'; 
 
+import ScrollToTop from './components/ui/ScrollToTop';
+
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <div className="relative min-h-screen w-full ">
 
                 {/* Fondo de modo oscuro fijo */}

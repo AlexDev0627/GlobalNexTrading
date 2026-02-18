@@ -33,35 +33,36 @@ function Home() {
      `}}
             />
 
-           
+
 
             <div className="relative z-10">
                 {/* <NavBar /> */}
-                <Hero 
-                images={['./pic1.jpg',
-    './pic2.jpg',
-    './pic3.png',
-    './pic4.jpg',
-    './pic5.jpg',
-    './pic6.jpg',
-    './pic7.jpg']}
+                <Hero
+                    images={['./pic1.jpg',
+                        './pic2.jpg',
+                        './pic3.png',
+                        './pic4.jpg',
+                        './pic5.jpg',
+                        './pic6.jpg',
+                        './pic7.jpg']}
 
-    gradientText="Global Next Trading"
-    titlePrefix="El socio estratégico para un mundo sin fronteras"
-    description="Somos una empresa venezolana con ADN global. Nos especializamos en la comercialización, distribución, almacenamiento, importación y exportación de una amplia gama de productos, conectando la producción nacional con mercados internacionales y viceversa."/>
-                
+                    gradientText="Global Next Trading"
+                    titleMargin="mb-10"
+                    titlePrefix="El socio estratégico para un mundo sin fronteras"
+                    description="Somos una empresa venezolana con ADN global. Nos especializamos en la comercialización, distribución, almacenamiento, importación y exportación de una amplia gama de productos, conectando la producción nacional con mercados internacionales y viceversa." />
+
                 <ScrollVariant>
                     <Marquee />
                 </ScrollVariant>
-                <Mision 
-                imageSrc="./pic3.png"
-                    titlePrefix={ <>
-                    ¿Está listo para hacer <span className="text-lime-500">crecer</span> su <span className="text-lime-500">negocio?</span>
+                <Mision
+                    imageSrc="./pic4.jpg"
+                    titlePrefix={<>
+                        ¿Está listo para hacer <span className="text-lime-500">crecer</span> su <span className="text-lime-500">negocio?</span>
                     </>}
-                     des="Facilitar el crecimiento de nuestros aliados comerciales a través de soluciones logísticas integrales y servicios de comercialización de alta calidad, conectando eficientemente a Venezuela con el resto del mundo mediante procesos transparentes, innovadores y seguros."
+                    des="Facilitar el crecimiento de nuestros aliados comerciales a través de soluciones logísticas integrales y servicios de comercialización de alta calidad, conectando eficientemente a Venezuela con el resto del mundo mediante procesos transparentes, innovadores y seguros."
                 />
                 <ScrollVariant>
-                <Vision />
+                    <Vision />
                 </ScrollVariant>
                 <Features />
                 <ScrollVariant>

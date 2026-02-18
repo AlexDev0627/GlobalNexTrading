@@ -1,173 +1,117 @@
+import { Link } from 'react-router-dom';
 import logoGlobal from '../assets/icons/globalNextWhite.png';
 import logoGlobalBlack from '../assets/icons/globalNextBlack.png';
 
 export default () => {
-
     const footerNavs = [
         {
-            label: "Resources",
+            label: "Servicios",
             items: [
-                {
-                    href: 'javascript:void()',
-                    name: 'contact'
-                },
-                {
-                    href: 'javascript:void()',
-                    name: 'Support'
-                },
-                {
-                    href: 'javascript:void()',
-                    name: 'Documentation'
-                },
-                {
-                    href: 'javascript:void()',
-                    name: 'Pricing'
-                },
+                { href: '/services', name: 'Flete Marítimo' },
+                { href: '/services', name: 'Carga Consolidada' },
+                { href: '/services', name: 'Agenciamiento Aduanal' },
+                { href: '/services', name: 'Seguro de Mercancía' },
             ],
         },
         {
-            label: "About",
+            label: "Empresa",
             items: [
-                {
-                    href: 'javascript:void()',
-                    name: 'Terms'
-                },
-                {
-                    href: 'javascript:void()',
-                    name: 'License'
-                },
-                {
-                    href: 'javascript:void()',
-                    name: 'Privacy'
-                },
-                {
-                    href: 'javascript:void()',
-                    name: 'About US'
-                },
+                { href: '/about', name: 'Nosotros' },
+                { href: '/contact', name: 'Contacto' },
+                { href: '/testimonials', name: 'Testimonios' },
             ]
         },
         {
-            label: "Explore",
+            label: "Legal",
             items: [
-                {
-                    href: 'javascript:void()',
-                    name: 'Showcase'
-                },
-                {
-                    href: 'javascript:void()',
-                    name: 'Roadmap'
-                },
-                {
-                    href: 'javascript:void()',
-                    name: 'Languages'
-                },
-                {
-                    href: 'javascript:void()',
-                    name: 'Blog'
-                },
+                { href: '#', name: 'Términos de Servicio' },
+                { href: '#', name: 'Política de Privacidad' },
             ]
-        },
-        {
-            label: "Company",
-            items: [
-                {
-                    href: 'javascript:void()',
-                    name: 'Partners'
-                },
-                {
-                    href: 'javascript:void()',
-                    name: 'Team'
-                },
-                {
-                    href: 'javascript:void()',
-                    name: 'Careers'
-                },
-            ],
         }
     ]
 
     return (
-        <>
-            <div className="flex items-center px-6 md:px-12 py-1">
-                {/* Línea izquierda - Degradado de transparente a gris */}
-                <span className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 to-gray-300 dark:from-transparent dark:via-slate-700 dark:to-slate-700"></span>
+        <footer className="relative bg-gray-50 dark:bg-gray-950 text-gray-600 dark:text-gray-400 pt-12 overflow-hidden transition-colors duration-500">
+            {/* Línea superior con gradiente de marca */}
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-lime-500/50 to-transparent"></div>
 
-                {/* Título - Con tu color lima */}
-                <span className="shrink-0 px-6 text-sm font-semibold tracking-widest text-lime-600 dark:text-lime-400 uppercase">
+            <div className="max-w-7xl mx-auto px-6 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
 
-                </span>
-
-                {/* Línea derecha - Degradado de gris a transparente */}
-                <span className="h-px flex-1 bg-gradient-to-r from-gray-300 via-gray-300 to-transparent dark:from-slate-700 dark:via-slate-700 dark:to-transparent"></span>
-            </div>
-            <footer className="relative pt-10 transition-colors duration-700 bg-gray-700 dark:bg-transparent"
-
-            >
-                <div className="max-w-screen-xl mx-auto px-4 md:px-8 justify-center items-center">
-                    <div className="justify-between items-center gap-12 md:flex">
-                        <div className="flex-1 max-w-lg">
+                    {/* Sección Logo y Descripción */}
+                    <div className="md:col-span-4 lg:col-span-5 space-y-8">
+                        <Link to="/">
                             <img
-                                className="h-9 w-115 cursor-pointer hidden dark:block"
+                                className="h-10 w-auto brightness-110 hidden dark:block"
                                 src={logoGlobal}
-                                alt="Global Next"
+                                alt="Global Next Trading Logo White"
                             />
                             <img
-                                className="h-9 w-115 cursor-pointer block dark:hidden"
+                                className="h-10 w-auto block dark:hidden"
                                 src={logoGlobalBlack}
-                                alt="Global Next"
+                                alt="Global Next Trading Logo Black"
                             />
-                        </div>
-                        <div className="flex justify-between mt-10 md:mt-0 w-30 items-center ">
-                            <a href="javascript:void()">
-                                <svg className="text-gray-400 w-6 h-6 hover:text-lime-400 duration-150" fill="none" viewBox="0 0 48 48"><g clip-path="url(#a)"><path fill="currentColor" d="M48 24C48 10.745 37.255 0 24 0S0 10.745 0 24c0 11.979 8.776 21.908 20.25 23.708v-16.77h-6.094V24h6.094v-5.288c0-6.014 3.583-9.337 9.065-9.337 2.625 0 5.372.469 5.372.469v5.906h-3.026c-2.981 0-3.911 1.85-3.911 3.75V24h6.656l-1.064 6.938H27.75v16.77C39.224 45.908 48 35.978 48 24z" /></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h48v48H0z" /></clipPath></defs></svg>
+                        </Link>
+                        <p className="max-w-sm text-base leading-relaxed font-light text-gray-500 dark:text-gray-400 pt-5">
+                            Líderes en ingeniería logística internacional. Conectamos tu negocio con los puertos más importantes del mundo con seguridad, transparencia y eficiencia inigualable.
+                        </p>
+
+                        {/* Redes Sociales */}
+                        <div className="flex items-center gap-5">
+                            <a href="#" className="hover:text-lime-500 transition-colors duration-300">
+                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
                             </a>
-                            <a href="javascript:void()">
-                                <svg className="text-gray-400 w-6 h-6 hover:text-lime-400 duration-150" fill="none" viewBox="0 0 48 48"><g clip-path="url(#clip0_17_80)"><path fill="currentColor" d="M15.1 43.5c18.11 0 28.017-15.006 28.017-28.016 0-.422-.01-.853-.029-1.275A19.998 19.998 0 0048 9.11c-1.795.798-3.7 1.32-5.652 1.546a9.9 9.9 0 004.33-5.445 19.794 19.794 0 01-6.251 2.39 9.86 9.86 0 00-16.788 8.979A27.97 27.97 0 013.346 6.299 9.859 9.859 0 006.393 19.44a9.86 9.86 0 01-4.462-1.228v.122a9.844 9.844 0 007.901 9.656 9.788 9.788 0 01-4.442.169 9.867 9.867 0 009.195 6.843A19.75 19.75 0 010 39.078 27.937 27.937 0 0015.1 43.5z" /></g><defs><clipPath id="clip0_17_80"><path fill="#fff" d="M0 0h48v48H0z" /></clipPath></defs></svg>
+                            <a href="#" className="hover:text-lime-500 transition-colors duration-300">
+                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" /></svg>
                             </a>
-                            {/* <a href="javascript:void()">
-                                <svg className="text-gray-400 w-6 h-6 hover:text-lime-400 duration-150" fill="none" viewBox="0 0 48 48"><g fill="currentColor" clip-path="url(#clip0_910_44)"><path fill-rule="evenodd" d="M24 1A24.086 24.086 0 008.454 6.693 23.834 23.834 0 00.319 21.044a23.754 23.754 0 003.153 16.172 23.98 23.98 0 0012.938 10.29c1.192.221 1.641-.518 1.641-1.146 0-.628-.024-2.45-.032-4.442-6.676 1.443-8.087-2.817-8.087-2.817-1.089-2.766-2.663-3.493-2.663-3.493-2.178-1.478.163-1.45.163-1.45 2.413.17 3.68 2.461 3.68 2.461 2.138 3.648 5.616 2.593 6.983 1.976.215-1.545.838-2.596 1.526-3.193-5.333-.6-10.937-2.647-10.937-11.791a9.213 9.213 0 012.472-6.406c-.246-.6-1.069-3.026.234-6.322 0 0 2.015-.64 6.602 2.446a22.904 22.904 0 0112.017 0c4.583-3.086 6.594-2.446 6.594-2.446 1.307 3.288.484 5.714.238 6.322a9.194 9.194 0 012.476 6.414c0 9.163-5.615 11.183-10.957 11.772.859.742 1.626 2.193 1.626 4.421 0 3.193-.028 5.762-.028 6.548 0 .636.433 1.38 1.65 1.146a23.98 23.98 0 0012.938-10.291 23.754 23.754 0 003.151-16.175A23.834 23.834 0 0039.56 6.69 24.086 24.086 0 0024.009 1H24z" clip-rule="evenodd" /><path d="M9.089 35.264c-.052.119-.243.154-.398.071-.155-.083-.27-.237-.214-.36.056-.122.242-.154.397-.07.155.082.274.24.215.359zM10.063 36.343a.4.4 0 01-.493-.11c-.155-.167-.187-.396-.068-.499.12-.102.334-.055.489.11.155.167.19.396.072.499zM11.008 37.714c-.147.103-.397 0-.536-.206a.395.395 0 010-.569c.147-.098.397 0 .537.202.139.202.143.47 0 .573zM12.292 39.042c-.131.146-.397.106-.616-.091-.219-.198-.27-.467-.139-.609.131-.142.397-.102.624.091.226.194.27.466.131.609zM14.092 39.816c-.06.186-.33.269-.6.19-.27-.08-.449-.3-.397-.49.051-.19.326-.277.6-.19.274.087.449.297.397.49zM16.056 39.95c0 .194-.223.36-.509.364-.286.004-.52-.154-.52-.348 0-.193.222-.36.508-.363.286-.004.52.15.52.347zM17.884 39.646c.036.194-.163.395-.45.443-.285.047-.536-.067-.572-.257-.035-.19.171-.395.45-.447.278-.05.536.068.572.261z" /></g><defs><clipPath id="clip0_910_44"><path fill="#fff" d="M0 0h48v48H0z" /></clipPath></defs></svg>
-                            </a> */}
-                            <a href="javascript:void()">
-                                <svg className="text-gray-400 w-6 h-6 hover:text-lime-400 duration-150" fill="currentColor" viewBox="0 0 48 48"><g clip-path="url(#clip0_17_63)"><path d="M24 4.322c6.413 0 7.172.028 9.694.14 2.343.104 3.61.497 4.453.825 1.116.432 1.922.957 2.756 1.791.844.844 1.36 1.64 1.79 2.756.329.844.723 2.12.826 4.454.112 2.53.14 3.29.14 9.693 0 6.413-.028 7.172-.14 9.694-.103 2.344-.497 3.61-.825 4.453-.431 1.116-.957 1.922-1.79 2.756-.845.844-1.642 1.36-2.757 1.791-.844.328-2.119.722-4.453.825-2.532.112-3.29.14-9.694.14-6.413 0-7.172-.028-9.694-.14-2.343-.103-3.61-.497-4.453-.825-1.115-.431-1.922-.956-2.756-1.79-.844-.844-1.36-1.641-1.79-2.757-.329-.844-.723-2.119-.826-4.453-.112-2.531-.14-3.29-.14-9.694 0-6.412.028-7.172.14-9.694.103-2.343.497-3.609.825-4.453.431-1.115.957-1.921 1.79-2.756.845-.844 1.642-1.36 2.757-1.79.844-.329 2.119-.722 4.453-.825 2.522-.113 3.281-.141 9.694-.141zM24 0c-6.516 0-7.331.028-9.89.14-2.55.113-4.304.526-5.822 1.116-1.585.619-2.926 1.435-4.257 2.775-1.34 1.332-2.156 2.672-2.775 4.247C.666 9.806.253 11.55.141 14.1.028 16.669 0 17.484 0 24s.028 7.331.14 9.89c.113 2.55.526 4.304 1.116 5.822.619 1.585 1.435 2.925 2.775 4.257a11.732 11.732 0 004.247 2.765c1.528.591 3.272 1.003 5.822 1.116 2.56.112 3.375.14 9.89.14 6.516 0 7.332-.028 9.891-.14 2.55-.113 4.303-.525 5.822-1.116a11.732 11.732 0 004.247-2.765 11.732 11.732 0 002.766-4.247c.59-1.528 1.003-3.272 1.115-5.822.113-2.56.14-3.375.14-9.89 0-6.516-.027-7.332-.14-9.891-.112-2.55-.525-4.303-1.115-5.822-.591-1.594-1.407-2.935-2.747-4.266a11.732 11.732 0 00-4.247-2.765C38.194.675 36.45.262 33.9.15 31.331.028 30.516 0 24 0z" /><path d="M24 11.672c-6.806 0-12.328 5.522-12.328 12.328 0 6.806 5.522 12.328 12.328 12.328 6.806 0 12.328-5.522 12.328-12.328 0-6.806-5.522-12.328-12.328-12.328zm0 20.325a7.998 7.998 0 010-15.994 7.998 7.998 0 010 15.994zM39.694 11.184a2.879 2.879 0 11-2.878-2.878 2.885 2.885 0 012.878 2.878z" /></g><defs><clipPath id="clip0_17_63"><path d="M0 0h48v48H0z" /></clipPath></defs></svg>
+                            <a href="#" className="hover:text-lime-500 transition-colors duration-300">
+                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
                             </a>
-                           
                         </div>
                     </div>
-                    <div className="flex-1 mt-16 space-y-6 justify-between sm:flex md:space-y-0 ">
-                        {
-                            footerNavs.map((item, idx) => (
-                                <ul
-                                    className="space-y-4 text-gray-300"
-                                    key={idx}
-                                >
-                                    <h4 className="text-gray-200 font-semibold sm:pb-2 underline ">
-                                        {item.label}
-                                    </h4>
-                                    {
-                                        item.items.map(((el, idx) => (
-                                            <li key={idx}>
-                                                <a
-                                                    href={el.href}
-                                                    className="duration-150 hover:text-lime-400"
 
-                                                >
-                                                    {el.name}
-                                                </a>
-                                            </li>
-                                        )))
-                                    }
+                    {/* Columnas de Navegación */}
+                    <div className="md:col-span-8 lg:col-span-7 flex flex-wrap md:flex-nowrap justify-between gap-8 md:gap-4">
+                        {footerNavs.map((section, idx) => (
+                            <div key={idx} className="min-w-[140px] space-y-6">
+                                <h4 className="text-sm font-medium uppercase tracking-widest text-gray-900 dark:text-white">
+                                    {section.label}
+                                </h4>
+                                <ul className="space-y-4">
+                                    {section.items.map((link, linkIdx) => (
+                                        <li key={linkIdx}>
+                                            <Link
+                                                to={link.href}
+                                                className="text-gray-500 hover:text-lime-500 transition-colors duration-300 text-sm inline-block group"
+                                            >
+                                                <span className="relative">
+                                                    {link.name}
+                                                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-lime-500 group-hover:w-full transition-all duration-300"></span>
+                                                </span>
+                                            </Link>
+                                        </li>
+                                    ))}
                                 </ul>
-                            ))
-                        }
-                    </div>
-                    <div className="mt-10 py-10 border-t border-gray-700 items-center justify-between sm:flex">
-                        <p className="text-gray-300">© 2026. Salas Design All rights reserved.</p>
-                        <div className="flex items-center gap-x-6 text-gray-400 mt-6">
-
-                        </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
-            </footer>
-        </>
+            </div>
+
+            {/* Derechos de autor y Créditos */}
+            <div className="max-w-7xl mx-auto px-6 py-12 border-t border-gray-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p className="text-gray-500 text-sm font-light">
+                    © 2026 Global Nex Trading. Todos los derechos reservados.
+                </p>
+                <div className="flex items-center gap-2 text-gray-400 dark:text-gray-600">
+                    <span className="text-[10px] uppercase tracking-widest leading-none font-medium">Designed by</span>
+                    <span className="text-gray-900 dark:text-white text-xs font-medium leading-none tracking-tight">SALAS DESIGN</span>
+                </div>
+            </div>
+
+            {/* Efectos de fondo sutiles */}
+            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-lime-500/[0.03] rounded-full blur-[100px] pointer-events-none"></div>
+            <div className="absolute top-1/2 right-0 -translate-y-1/2 w-64 h-64 bg-lime-500/[0.02] rounded-full blur-[80px] pointer-events-none"></div>
+        </footer>
     )
 }

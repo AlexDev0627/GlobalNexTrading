@@ -5,10 +5,10 @@ export default () => {
             <div className="py-60  text-black dark:bg-transparent  ">
                 <div className="max-w-screen-xl mx-auto px-4 flex-wrap gap-x-12 justify-between items-center md:flex md:px-8 lg:flex-nowrap transition-colors duration-300">
                     <div className="max-w-xl space-y-3">
-                        <h3 className="text-lime-500 text-sm font-semibold dark:text-lime-500">
+                        <h3 className="text-lime-500 text-sm font-medium dark:text-lime-500">
                             SHOWCASE
                         </h3>
-                        <p className="text-slate-900 dark:text-white text-3xl font-semibold sm:text-4xl">
+                        <p className="text-slate-900 dark:text-white text-3xl font-medium sm:text-4xl">
                             Eleva tu empresa con <br></br><span className="text-lime-600 dark:text-lime-400">Global Next Trading</span>
                         </p>
                         <p className="text-slate-800 dark:text-gray-400">
