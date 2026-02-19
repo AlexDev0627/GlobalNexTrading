@@ -2,6 +2,9 @@
 
 This project represents the visual identity and services of **Global Next**, a company dedicated to comprehensive logistics that connects Venezuela to the world through efficient transportation solutions and customs management.
 
+### 🖥️ Preview of the Web Application
+
+![Global Next Website Screenshot](src/assets/images/ScreenShot.png)
 ---
 
 ## 🚀 Main Services
@@ -36,6 +39,4 @@ This repository contains graphic resources generated for brand representation, i
 ---
 *Developed for efficient international trade management.*
 
-### 🖥️ Preview of the Web Application
 
-![Global Next Website Screenshot](src/assets/images/ScreenShot.png)
