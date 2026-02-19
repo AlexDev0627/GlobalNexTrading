@@ -38,4 +38,4 @@ This repository contains graphic resources generated for brand representation, i
 
 ### 🖥️ Preview of the Web Application
 
-![Global Next Website Screenshot](./assets/images/ScreenShot.png)
+![Global Next Website Screenshot](src/assets/images/ScreenShot.png)
