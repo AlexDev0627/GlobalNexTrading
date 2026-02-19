@@ -1,67 +1,154 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { UserIcon, EnvelopeIcon, ChatBubbleBottomCenterTextIcon, TableCellsIcon } from '@heroicons/react/24/outline';
+
 export default function Form() {
     return (
-        <>
+        <section className="relative bg-transparent flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto px-6 py-24 md:pt-42 pb-100 gap-16 overflow-hidden">
 
-            <section className='relative bg-transparent flex flex-col md:flex-row justify-center px-4 pt-40 pb-50 '>
+            {/* Decoraciones de fondo Premium */}
+            <div className="absolute inset-0 pointer-events-none z-0">
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-lime-500/10 rounded-full blur-[140px] opacity-60" />
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[140px] opacity-40" />
 
-                {/* <div className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none mb-10 size-140 bg-green-500/35 rounded-full blur-[200px]'></div> */}
+                {/* Dotted Grid Pattern */}
+                <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#374151_1px,transparent_1px)] [background-size:40px_40px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_20%,transparent_100%)] opacity-30 dark:opacity-50"></div>
+            </div>
 
-                <div className='text-center md:text-left mt-12'>
-                    <div className="flex items-center  p-1.5 rounded-full border border-green-900 text-xs w-fit mx-auto md:mx-0">
-                        <div className="flex items-center">
-                            <img className="size-7 rounded-full border border-green-900" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=50" alt="userImage1" />
-                            <img className="size-7 rounded-full border border-green-900 -translate-x-2" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=50" alt="userImage2" />
-                            <img className="size-7 rounded-full border border-green-900 -translate-x-4" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=50&h=50&auto=format&fit=crop" alt="userImage3" />
-                        </div>
-                        <p className="-translate-x-2 text-xs text-slate-200">Conviertete en uno de nuestros 2k+ clientes </p>
+            {/* Columna de Texto */}
+            <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="relative z-10 w-full lg:w-1/2 text-center lg:text-left"
+            >
+                <div className="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/20 rounded-full px-4 py-1.5 mb-8">
+                    <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-500"></span>
+                    </span>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-lime-700 dark:text-lime-400">
+                        Atención Inmediata
+                    </span>
+                </div>
+
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 dark:text-white mb-8 leading-tight tracking-tighter">
+                    ¿Listo para expandir sus <br />
+                    <span className="text-lime-500 font-bold">fronteras comerciales?</span>
+                </h2>
+
+                <p className="text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                    Nuestro equipo de expertos está listo para diseñar la arquitectura logística que su negocio necesita. Solicite una asesoría personalizada hoy mismo.
+                </p>
+
+                <div className="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start">
+                    <div className="flex -space-x-4">
+                        <img className="size-14 rounded-full border-4 border-white dark:border-black object-cover shadow-xl" src="./ricardo.jpeg" alt="Aliado 1" />
+                        <img className="size-14 rounded-full border-4 border-white dark:border-black object-cover shadow-xl" src="./andres.png" alt="Aliado 2" />
+                        <img className="size-14 rounded-full border-4 border-white dark:border-black object-cover shadow-xl" src="./elena.png" alt="Aliado 3" />
                     </div>
-                    <h1 className='font-medium text-3xl md:text-5xl bg-linear-to-r max-md:mx-auto from-white to-green-300 bg-clip-text text-transparent max-w-[470px] mt-4'>¿Listo para Transformar tu Experiencia Digital?</h1>
-                    <p className='text-sm/6 text-white max-w-[345px] mt-4 mx-auto md:mx-0'>Permita que nuestro equipo de diseño cree un sitio web que eleve su marca. Reserve una sesión gratuita hoy mismo.</p>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+                        Únase a más de <span className="text-gray-900 dark:text-white font-bold text-base border-b-2 border-lime-500 pb-1">500+ aliados</span> internacionales.
+                    </div>
                 </div>
+            </motion.div>
 
-                <div className='w-full max-w-lg max-md:mx-auto bg-[#00A63E]/0 backdrop-blur-sm border border-white/10 rounded-xl p-8'>
-                    <form className='space-y-6'>
-                        <div>
-                            <label className='block text-white text-sm mb-2'>Nombre</label>
-                            <input
-                                type="text"
-                                required
-                                placeholder="Escribe tu nombre aquí..."
-                                className='w-full bg-[#00A63E]/5 border border-white/20 rounded-lg px-4 py-3 text-white/40 placeholder:text-white/40 placeholder:text-sm focus:outline-none focus:border-green-600 transition'
-                            />
-                        </div>
+            {/* Columna del Formulario con efecto Tilt sutil */}
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="relative z-10 w-full lg:w-[540px]"
+            >
+                <div className="relative group p-[1px] rounded-[2.5rem] bg-gradient-to-br from-gray-200 to-transparent dark:from-lime-500/40 dark:via-blue-500/40 dark:to-transparent">
+                    <div className="relative bg-white/95 dark:bg-[#0a0a0a]/95 backdrop-blur-3xl rounded-[2.5rem] p-10 md:p-12 shadow-2xl overflow-hidden">
+                        {/* Brillo de esquina sutil */}
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-lime-500/5 blur-3xl rounded-full" />
 
-                        <div>
-                            <label className='block text-white text-sm mb-2'>Email</label>
-                            <input
-                                type="email"
-                                required
-                                placeholder="ejemplo@gmail.com"
-                                className='w-full bg-[#00A63E]/5 border border-white/20 rounded-lg px-4 py-3 text-white/40 placeholder:text-white/40 placeholder:text-sm focus:outline-none focus:border-green-600 transition'
-                            />
-                        </div>
+                        <form className="space-y-6 relative z-10">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="space-y-2">
+                                    <label className="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 ml-1">Nombre Completo</label>
+                                    <div className="relative group">
+                                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 dark:text-gray-300 group-focus-within:text-lime-500 transition-colors">
+                                            <UserIcon className="size-5" />
+                                        </div>
+                                        <input
+                                            type="text"
+                                            required
+                                            placeholder="Nombre"
+                                            className="w-full bg-gray-100/50 dark:bg-white/10 border border-gray-200 dark:border-white/10 rounded-2xl pl-12 pr-5 py-4 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-500/30 focus:border-lime-500/40 transition-all duration-300"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 ml-1">Correo Electrónico</label>
+                                    <div className="relative group">
+                                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 dark:text-gray-300 group-focus-within:text-lime-500 transition-colors">
+                                            <EnvelopeIcon className="size-5" />
+                                        </div>
+                                        <input
+                                            type="email"
+                                            required
+                                            placeholder="email@empresa.com"
+                                            className="w-full bg-gray-100/50 dark:bg-white/10 border border-gray-200 dark:border-white/10 rounded-2xl pl-12 pr-5 py-4 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-500/30 focus:border-lime-500/40 transition-all duration-300"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
 
-                        <div>
-                            <label className='block text-white text-sm mb-2'>Mensaje</label>
-                            <textarea
-                                placeholder="Escribe tu mensaje aquí..."
-                                rows="4"
-                                required
-                                className='w-full bg-[#00A63E]/5 border border-white/20 rounded-lg px-4 py-3 text-white/40 placeholder:text-white/40 placeholder:text-sm focus:outline-none focus:border-green-600 transition resize-none'
-                            ></textarea>
-                        </div>
+                            <div className="space-y-2">
+                                <label className="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 ml-1">Asunto de Interés</label>
+                                <div className="relative group">
+                                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 dark:text-gray-300 group-focus-within:text-lime-500 transition-colors">
+                                        <TableCellsIcon className="size-5" />
+                                    </div>
+                                    <select className="w-full bg-gray-100/50 dark:bg-white/10 border border-gray-200 dark:border-white/10 rounded-2xl pl-12 pr-10 py-4 text-gray-900 dark:text-white appearance-none focus:outline-none focus:ring-2 focus:ring-lime-500/30 focus:border-lime-500/40 transition-all duration-300 cursor-pointer">
+                                        <option className="bg-white dark:bg-[#0a0a0a]">Logística Marítima / Aérea</option>
+                                        <option className="bg-white dark:bg-[#0a0a0a]">Importación / Exportación</option>
+                                        <option className="bg-white dark:bg-[#0a0a0a]">Almacenamiento y Aduanas</option>
+                                        <option className="bg-white dark:bg-[#0a0a0a]">Otro Servicio</option>
+                                    </select>
+                                    <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-gray-400">
+                                        <svg className="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" /></svg>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <div className='flex items-center justify-between'>
-                            <p className='text-xs md:text-sm text-white/60 max-w-3xs'>
-                                Al enviar este formulario, aceptas nuestra <a href="" className='text-green-400 hover:underline'>Política de Privacidad</a>.
-                            </p>
-                            <button type="submit" className='bg-linear-to-r from-green-950 to-green-600 hover:from-green-600 hover:to-green-950 text-white text-sm px-8 md:px-16 py-3 rounded-full transition duration-300 cursor-pointer'>
-                                Enviar
-                            </button>
-                        </div>
-                    </form>
+                            <div className="space-y-2">
+                                <label className="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 ml-1">Mensaje</label>
+                                <div className="relative group">
+                                    <div className="absolute top-4 left-4 flex items-start pointer-events-none text-gray-400 dark:text-gray-300 group-focus-within:text-lime-500 transition-colors">
+                                        <ChatBubbleBottomCenterTextIcon className="size-5" />
+                                    </div>
+                                    <textarea
+                                        placeholder="Cuéntenos sobre su proyecto..."
+                                        rows="4"
+                                        required
+                                        className="w-full bg-gray-100/50 dark:bg-white/10 border border-gray-200 dark:border-white/10 rounded-2xl pl-12 pr-5 py-4 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-500/30 focus:border-lime-500/40 transition-all duration-300 resize-none"
+                                    ></textarea>
+                                </div>
+                            </div>
+
+                            <div className="pt-4 flex flex-col md:flex-row items-center justify-between gap-8">
+                                <p className="text-[10px] leading-relaxed text-gray-400 dark:text-gray-500 max-w-[220px] text-center md:text-left">
+                                    Al enviar este formulario, acepta nuestra <a href="#" className="underline text-gray-600 dark:text-gray-300 hover:text-lime-500 transition-colors">Política de Privacidad</a> y de tratamiento comercial.
+                                </p>
+                                <motion.button
+                                    whileHover={{ scale: 1.02, y: -2 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    type="submit"
+                                    className="w-full md:w-auto px-12 py-5 bg-gradient-to-r from-lime-500 to-lime-400 hover:from-lime-400 hover:to-lime-500 text-black font-bold text-[11px] uppercase tracking-[0.2em] rounded-2xl transition-all shadow-xl shadow-lime-500/20 active:shadow-none"
+                                >
+                                    Enviar Consulta
+                                </motion.button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </section>
-        </>
+            </motion.div>
+        </section>
     );
-};
+}

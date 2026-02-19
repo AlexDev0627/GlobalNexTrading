@@ -42,8 +42,8 @@ export default function NavBar() {
 
     const navigation = [
         { name: 'Inicio', href: '/' },
-        { name: 'Servicios', href: '/services' },
         { name: 'Nosotros', href: '/about' },
+        { name: 'Servicios', href: '/services' },
         { name: 'Contacto', href: '/contact' },
     ]
 
@@ -118,18 +118,21 @@ export default function NavBar() {
                         whileHover={{ rotate: 15 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => setDarkMode(!darkMode)}
-                        className="p-2.5 rounded-2xl bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-white border border-transparent hover:border-lime-500/50 transition-all focus:outline-none"
+                        className="cursor-pointer p-2.5 rounded-2xl bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-white border border-transparent hover:border-lime-500/50 transition-all focus:outline-none"
                     >
                         {darkMode ? <SunIcon className="size-5 text-yellow-500" /> : <MoonIcon className="size-5" />}
                     </motion.button>
 
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="px-6 py-2.5 bg-lime-500 hover:bg-lime-400 text-black font-medium text-[10px] uppercase tracking-[0.15em] rounded-2xl transition-all shadow-lg shadow-lime-500/20"
-                    >
-                        Cotizar
-                    </motion.button>
+                    <Link to="/contact">
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="cursor-pointer px-6 py-2.5 bg-lime-500 hover:bg-lime-400 text-black font-medium text-[10px] uppercase tracking-[0.15em] rounded-2xl transition-all shadow-lg shadow-lime-500/20"
+                        >
+                            Cotizar
+                        </motion.button>
+                    </Link>
+
                 </div>
             </nav>
 

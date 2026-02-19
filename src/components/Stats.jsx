@@ -1,17 +1,21 @@
 import { motion } from 'framer-motion';
+import CountUp from './ui/CountUp.jsx';
 
 export default () => {
     const stats = [
         {
-            data: "35K",
+            value: 35,
+            suffix: "K",
             title: "Clientes Activos"
         },
         {
-            data: "40+",
+            value: 40,
+            suffix: "+",
             title: "Países Conectados"
         },
         {
-            data: "30M+",
+            value: 30,
+            suffix: "M+",
             title: "Entregas Exitosas"
         },
     ]
@@ -56,25 +60,39 @@ export default () => {
                     {stats.map((item, idx) => (
                         <motion.div
                             key={idx}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
+                            initial="initial"
+                            whileHover="hover"
+                            whileInView="animate"
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1, type: "spring", stiffness: 100 }}
-                            className="relative group flex flex-col items-center"
+                            className="relative flex flex-col items-center cursor-pointer"
                         >
                             {/* Decoración de fondo para el número */}
                             <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-24 bg-lime-500/5 blur-2xl rounded-full group-hover:bg-lime-500/10 transition-colors duration-500" />
 
-                            <h4 className="relative text-6xl md:text-7xl font-medium text-lime-500 dark:text-lime-400 mb-2 tracking-tighter">
-                                {item.data}
+                            <h4 className="relative text-5xl md:text-6xl font-medium text-lime-500 dark:text-lime-400 mb-2 tracking-tighter">
+                                <CountUp
+                                    from={0}
+                                    to={item.value}
+                                    duration={2}
+                                    separator=","
+                                />
+                                {item.suffix}
                             </h4>
 
                             <p className="text-lg text-gray-900 dark:text-white font-medium uppercase tracking-widest text-center">
                                 {item.title}
                             </p>
 
-                            {/* Línea decorativa inferior */}
-                            <div className="w-12 h-1 bg-lime-500/20 rounded-full mt-4 group-hover:w-20 group-hover:bg-lime-500 transition-all duration-500" />
+                            {/* Línea decorativa inferior con Framer Motion */}
+                            <motion.div
+                                variants={{
+                                    initial: { width: 48, backgroundColor: "rgba(132, 204, 22, 0.2)" },
+                                    hover: { width: 90, backgroundColor: "rgba(132, 204, 22, 1)" }
+                                }}
+                                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                className="h-1 rounded-full mt-4 "
+                            />
                         </motion.div>
                     ))}
                 </div>

@@ -97,7 +97,7 @@ export default function Features3() {
                                 whileHover={{ scale: 1.02 }}
                                 className="h-2/3 rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl"
                             >
-                                <img src="./pic5.jpg" className="w-full h-full object-cover" alt="Logistics view" />
+                                <img src="./pic8.png" className="w-full h-full object-cover" alt="Logistics view" />
                             </motion.div>
                             <motion.div
                                 whileHover={{ scale: 1.02 }}

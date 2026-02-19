@@ -1,10 +1,7 @@
-import NavBar from '../components/NavBar'
 import Hero from "../components/Hero.jsx";
 import Cta from "../components/Cta.jsx";
-import Partners from "../components/Partners.jsx";
 import Features from "../components/Feature.jsx";
 import Stats from "../components/Stats.jsx";
-import FAQ from '../components/FAQ.jsx';
 import Marquee from "../components/Marquee.jsx"
 import ScrollVariant from "../components/ui/ScrollVariant"
 import Mision from '../components/Mision.jsx'
@@ -36,7 +33,6 @@ function Home() {
 
 
             <div className="relative z-10">
-                {/* <NavBar /> */}
                 <Hero
                     images={['./pic1.jpg',
                         './pic2.jpg',
@@ -47,7 +43,7 @@ function Home() {
                         './pic7.jpg']}
 
                     gradientText="Global Next Trading"
-                    titleMargin="mb-10"
+                    titleMargin="mt-20"
                     titlePrefix="El socio estratégico para un mundo sin fronteras"
                     description="Somos una empresa venezolana con ADN global. Nos especializamos en la comercialización, distribución, almacenamiento, importación y exportación de una amplia gama de productos, conectando la producción nacional con mercados internacionales y viceversa." />
 
@@ -68,7 +64,6 @@ function Home() {
                 <ScrollVariant>
                     <Cta />
                 </ScrollVariant>
-                {/* <FAQ /> */}
                 <ScrollVariant>
                     <Testimonial />
                 </ScrollVariant>

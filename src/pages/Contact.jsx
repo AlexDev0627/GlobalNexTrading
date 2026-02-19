@@ -21,17 +21,12 @@ const Contact = () => {
 
 
 
-            <div className="relative z-10 pt-32">
-                <h1 className="text-5xl font-medium text-center text-gray-900 dark:text-white uppercase tracking-tighter">
-                    Contacto<span className="text-lime-500">.</span>
-                </h1>
-                <p className="text-center mt-4 text-gray-600 dark:text-gray-400">Ofrecemos una amplia gama de servicios para satisfacer tus necesidades financieras.</p>
 
-                <Form />
-                <Footer />
+            <Form />
+            <Footer />
 
-            </div>
         </div>
+
     );
 }
 

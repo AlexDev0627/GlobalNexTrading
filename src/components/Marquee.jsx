@@ -8,6 +8,7 @@ export default function Marquee() {
         { dark: './Hapag.png', light: './Hapag.png', name: 'Hapag-Lloyd', shouldInvert: true },
         { dark: './Cma.png', light: './Cma.png', name: 'CMA CGM' },
         { dark: './HamburgSued.svg', light: './HamburgSued.svg', name: 'Hamburg Sued' },
+        { dark: './Alfa.png', light: './Alfa.png', name: 'Alfa', shouldInvert: true },
     ];
 
     // Duplicamos la lista para crear el efecto de bucle infinito sin saltos

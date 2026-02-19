@@ -18,7 +18,7 @@ const Mision = ({
             <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-8">
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ${reverse ? 'lg:flex-row-reverse' : ''}`}>
 
-                    {/* Contenedor de Imagen con Diseño Premium */}
+                    {/* Contenedor de imagen con diseño premium */}
                     <motion.div
                         initial={{ opacity: 0, x: reverse ? 50 : -50 }}
                         whileInView={{ opacity: 1, x: 0 }}

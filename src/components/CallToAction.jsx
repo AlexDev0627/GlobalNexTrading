@@ -6,7 +6,8 @@ const CallToAction = () => {
 
     return (
         <section className="relative pt-32 pb-35 px-6 overflow-hidden bg-black">
-            {/* Fondo con imagen y overlay premium */}
+
+            {4/* Fondo con imagen y overlay premium */}
             <div className="absolute inset-0 z-0">
                 <img
                     src={image}

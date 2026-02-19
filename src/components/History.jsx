@@ -4,7 +4,9 @@ import GradientText from './ui/GradientText';
 const History = () => {
     return (
         <section className="relative py-24 bg-transparent dark:bg-transparent overflow-hidden">
+
             {/* Decoración de fondo sutil */}
+
             {/* <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-lime-500/10 rounded-full blur-3xl pointer-events-none" /> */}
             {/* <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-lime-500/5 rounded-full blur-3xl pointer-events-none" /> */}
 
@@ -71,7 +73,7 @@ const History = () => {
                             <motion.img
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ duration: 0.5 }}
-                                src="./pic7.jpg"
+                                src="./pic8.png"
                                 alt="Logística Global"
                                 className="w-full h-auto object-cover"
                             />

@@ -31,7 +31,7 @@ export default () => {
     ]
 
     return (
-        <footer className="relative bg-gray-50 dark:bg-gray-950 text-gray-600 dark:text-gray-400 pt-12 overflow-hidden transition-colors duration-500">
+        <footer className="relative bg-gray-50 dark:bg-black/10 text-gray-600 dark:text-gray-400 pt-12 overflow-hidden transition-colors duration-500">
             {/* Línea superior con gradiente de marca */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-lime-500/50 to-transparent"></div>
 
@@ -94,19 +94,47 @@ export default () => {
                                 </ul>
                             </div>
                         ))}
+
+                    </div>
+
+                </div>
+                {/* Métodos de Pago */}
+                <div className="flex flex-col items-center md:items-end gap-4 pt-20 md:pt-0">
+                    <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400 dark:text-gray-600">Métodos de Pago</span>
+                    <div className="flex flex-wrap items-center justify-center md:justify-end gap-5">
+                        {[
+                            { src: './visa.png', alt: 'Visa', className: 'h-5 md:h-6' },
+                            { src: './mastercard.png', alt: 'Mastercard', className: 'h-14 md:h-14' },
+                            { src: './paypal.webp', alt: 'Paypal', className: 'h-20 md:h-20' },
+                            { src: './zelle.png', alt: 'Zelle', className: 'h-10 md:h-10' },
+                            { src: './binance.png', alt: 'Binance', className: 'h-20 md:h-80' }
+                        ].map((payment, idx) => (
+                            <div key={idx} className="w-10 md:w-14 h-8 flex items-center justify-center">
+                                <img
+                                    src={payment.src}
+                                    alt={payment.alt}
+                                    className={`${payment.className} w-auto object-contain cursor-pointer`}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
 
             {/* Derechos de autor y Créditos */}
-            <div className="max-w-7xl mx-auto px-6 py-12 border-t border-gray-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-                <p className="text-gray-500 text-sm font-light">
-                    © 2026 Global Nex Trading. Todos los derechos reservados.
-                </p>
-                <div className="flex items-center gap-2 text-gray-400 dark:text-gray-600">
-                    <span className="text-[10px] uppercase tracking-widest leading-none font-medium">Designed by</span>
-                    <span className="text-gray-900 dark:text-white text-xs font-medium leading-none tracking-tight">SALAS DESIGN</span>
+            <div className="max-w-7xl mx-auto px-6 py-12 border-t border-gray-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div className="space-y-4">
+                    <p className="text-gray-500 text-sm font-light text-center md:text-left">
+                        © 2026 Global Nex Trading. Todos los derechos reservados.
+                    </p>
+                    <div className="flex items-center justify-center md:justify-start gap-2 text-gray-400 dark:text-gray-600">
+                        <span className="text-[10px] uppercase tracking-widest leading-none font-medium">Designed by</span>
+                        <span className="text-gray-900 dark:text-white text-xs font-medium leading-none tracking-tight">SALAS DESIGN</span>
+                    </div>
                 </div>
+
+
+
             </div>
 
             {/* Efectos de fondo sutiles */}

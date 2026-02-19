@@ -1,5 +1,4 @@
 import Hero from '../components/Hero.jsx';
-import Partners from "../components/Partners";
 import Footer from '../components/Footer.jsx'
 import FAQ from '../components/FAQ.jsx'
 import Form from '../components/Form.jsx'
@@ -42,47 +41,44 @@ const About = () => {
                     description="Somos el socio estratégico que su empresa necesita para conquistar mercados globales. Conectamos la excelencia venezolana con las oportunidades del mundo a través de logística inteligente y segura."
                 />
 
-                <ScrollVariant>
-                    <Marquee />
-                </ScrollVariant>
+
                 <ScrollVariant>
                     <History />
                 </ScrollVariant>
                 <ScrollVariant>
-                    <Values />
+                    <Marquee />
+                </ScrollVariant>
+                <ScrollVariant>
+                    <Mision
+                        marginTop="mt-0"
+                        reverse={false}
+                        titlePrefix={
+                            <>
+                                Nuestra <span className="text-lime-400">Misión</span>
+                            </>
+                        }
+                        des="Facilitar el crecimiento de nuestros aliados comerciales a través de soluciones logísticas integrales y servicios de comercialización de alta calidad, conectando eficientemente a Venezuela con el resto del mundo mediante procesos transparentes, innovadores y seguros."
+                    />
                 </ScrollVariant>
 
+                <ScrollVariant>
+                    <Mision
+                        imageSrc="./pic7.jpg"
+                        marginTop="mt-0"
+                        reverse={true}
+                        titlePrefix={
+                            <>
+                                Nuestra <span className="text-lime-400">Visión</span>
+                            </>
+                        }
+                        des="Consolidarnos para el año 2030 como la plataforma logística y comercial líder en la región, siendo reconocidos por nuestra capacidad de adaptación tecnológica, nuestra excelencia operativa y por ser el puente indispensable para el comercio internacional en Venezuela."
+                    />
+                </ScrollVariant>
 
-                <div className="bg-transparent dark:bg-neutral-900/30 transition-colors duration-700">
-                    <ScrollVariant>
-                        <Mision
-                            marginTop="mt-0"
-                            reverse={false}
-                            titlePrefix={
-                                <>
-                                    Nuestra <span className="text-lime-400">Misión</span>
-                                </>
-                            }
-                            des="Facilitar el crecimiento de nuestros aliados comerciales a través de soluciones logísticas integrales y servicios de comercialización de alta calidad, conectando eficientemente a Venezuela con el resto del mundo mediante procesos transparentes, innovadores y seguros."
-                        />
-                    </ScrollVariant>
-
-                    <ScrollVariant>
-                        <Mision
-                            imageSrc="./pic7.jpg"
-                            marginTop="mt-0"
-                            reverse={true}
-                            titlePrefix={
-                                <>
-                                    Nuestra <span className="text-lime-400">Visión</span>
-                                </>
-                            }
-                            des="Consolidarnos para el año 2030 como la plataforma logística y comercial líder en la región, siendo reconocidos por nuestra capacidad de adaptación tecnológica, nuestra excelencia operativa y por ser el puente indispensable para el comercio internacional en Venezuela."
-                        />
-                    </ScrollVariant>
-                </div>
-
-                <Partners />
+                <ScrollVariant>
+                    <Values />
+                </ScrollVariant>
+                {/* <Partners /> */}
 
                 <section className="py-20 bg-gray-50 dark:bg-black/50">
                     <FAQ />
