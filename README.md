@@ -35,3 +35,7 @@ This repository contains graphic resources generated for brand representation, i
 
 ---
 *Developed for efficient international trade management.*
+
+### 🖥️ Preview of the Web Application
+
+![Global Next Website Screenshot](assets/images/ScreenShot.png)
