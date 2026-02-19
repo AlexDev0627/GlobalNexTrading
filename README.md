@@ -1,16 +1,37 @@
-# React + Vite
+# 🌐 Global Next - Logistics and International Trade
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project represents the visual identity and services of **Global Next**, a company dedicated to comprehensive logistics that connects Venezuela to the world through efficient transportation solutions and customs management.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Main Services
 
-## React Compiler
+### 📦 Door-to-Door Logistics
+We manage the entire logistics process from origin to final destination, ensuring security and speed in every shipment.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+### 📜 Customs Management
+Consultation and documentation handling to facilitate import and export processes, ensuring regulatory compliance.
 
-## Expanding the ESLint configuration
+### 🚢 Multimodal Transportation
+We connect via sea, air, and land to optimize times and costs in goods distribution.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 💡 Global DNA: Supply Optimization
+We maximize efficiency in the supply chain, storage, and distribution of products, integrating technology and global networks for a constant flow.
+
+---
+
+## 🌍 International Markets
+We facilitate international trade by connecting national production with strategic allies in key global markets.
+
+---
+
+## 🛠️ Visual Resources
+This repository contains graphic resources generated for brand representation, including:
+* Logos and visual concepts.
+* Logistics infographics.
+* Representations of multimodal transport.
+
+---
+*Developed for efficient international trade management.*
