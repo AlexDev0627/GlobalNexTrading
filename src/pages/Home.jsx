@@ -7,7 +7,7 @@ import ScrollVariant from "../components/ui/ScrollVariant"
 import Mision from '../components/Mision.jsx'
 import Footer from '../components/Footer.jsx'
 import Vision from '../components/Vision.jsx'
-import Testimonial from '../components/Testimonial.jsx'
+// import Testimonial from '../components/Testimonial.jsx'
 import CallToAction from '../components/CallToAction.jsx'
 
 function Home() {
@@ -64,12 +64,15 @@ function Home() {
                 <ScrollVariant>
                     <Cta />
                 </ScrollVariant>
-                <ScrollVariant>
+
+                {/* <ScrollVariant>
                     <Testimonial />
-                </ScrollVariant>
-                <ScrollVariant>
+                </ScrollVariant> */}
+
+                {/* <ScrollVariant>
                     <Stats />
-                </ScrollVariant>
+                </ScrollVariant> */}
+
                 <ScrollVariant>
                     <CallToAction />
                 </ScrollVariant>

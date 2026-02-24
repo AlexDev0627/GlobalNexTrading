@@ -125,7 +125,7 @@ export default () => {
             <div className="max-w-7xl mx-auto px-6 py-12 border-t border-gray-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="space-y-4">
                     <p className="text-gray-500 text-sm font-light text-center md:text-left">
-                        © 2026 Global Nex Trading. Todos los derechos reservados.
+                        © 2026 Global Next Trading. Todos los derechos reservados.
                     </p>
                     <div className="flex items-center justify-center md:justify-start gap-2 text-gray-400 dark:text-gray-600">
                         <span className="text-[10px] uppercase tracking-widest leading-none font-medium">Designed by</span>

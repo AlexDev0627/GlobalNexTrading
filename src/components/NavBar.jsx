@@ -70,7 +70,7 @@ export default function NavBar() {
                             <img src={logo} alt="Logo" className="h-9 w-auto hidden dark:block" />
                             <img src={logo2} alt="Logo" className="h-9 w-auto block dark:hidden" />
                             <span className="text-xl font-medium tracking-tight text-gray-900 dark:text-white hidden sm:block">
-                                GlobalNex<span className="text-lime-500">Trading</span>
+                                GlobalNext<span className="text-lime-500">Trading</span>
                             </span>
                         </motion.div>
                     </Link>

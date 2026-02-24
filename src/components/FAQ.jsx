@@ -23,7 +23,7 @@ const Faq = () => {
         },
         {
             question: "¿Cómo puedo solicitar una cotización?",
-            answer: "Puede solicitar una cotización haciendo click en el botón 'Cotizar' en nuestro NavBar o a través de nuestra sección de contacto. Un asesor comercial se pondrá en contacto con usted en breve.",
+            answer: "Puede solicitar una cotización haciendo click en el botón 'Cotizar' en nuestra barra de navegacion o a través de nuestra sección de contacto. Un asesor comercial se pondrá en contacto con usted en breve.",
         },
     ];
 

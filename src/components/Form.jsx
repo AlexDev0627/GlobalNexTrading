@@ -42,7 +42,7 @@ export default function Form() {
                     Nuestro equipo de expertos está listo para diseñar la arquitectura logística que su negocio necesita. Solicite una asesoría personalizada hoy mismo.
                 </p>
 
-                <div className="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start">
+                {/* <div className="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start">
                     <div className="flex -space-x-4">
                         <img className="size-14 rounded-full border-4 border-white dark:border-black object-cover shadow-xl" src="./ricardo.jpeg" alt="Aliado 1" />
                         <img className="size-14 rounded-full border-4 border-white dark:border-black object-cover shadow-xl" src="./andres.png" alt="Aliado 2" />
@@ -51,7 +51,7 @@ export default function Form() {
                     <div className="text-sm text-gray-500 dark:text-gray-400 font-medium">
                         Únase a más de <span className="text-gray-900 dark:text-white font-bold text-base border-b-2 border-lime-500 pb-1">500+ aliados</span> internacionales.
                     </div>
-                </div>
+                </div> */}
             </motion.div>
 
             {/* Columna del Formulario con efecto Tilt sutil */}
@@ -140,7 +140,7 @@ export default function Form() {
                                     whileHover={{ scale: 1.02, y: -2 }}
                                     whileTap={{ scale: 0.98 }}
                                     type="submit"
-                                    className="w-full md:w-auto px-12 py-5 bg-gradient-to-r from-lime-500 to-lime-400 hover:from-lime-400 hover:to-lime-500 text-black font-bold text-[11px] uppercase tracking-[0.2em] rounded-2xl transition-all shadow-xl shadow-lime-500/20 active:shadow-none"
+                                    className="w-full md:w-auto px-12 py-5 bg-gradient-to-r from-lime-500 to-lime-400 hover:from-lime-400 hover:to-lime-500 text-black font-bold text-[11px] uppercase tracking-[0.2em] rounded-2xl transition-all shadow-xl shadow-lime-500/20 active:shadow-none cursor-pointer"
                                 >
                                     Enviar Consulta
                                 </motion.button>

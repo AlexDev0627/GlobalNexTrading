@@ -106,7 +106,7 @@ export default function Vision() {
                         transition={{ delay: 0.2 }}
                         className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl font-light leading-relaxed"
                     >
-                        En Global Nex Trading, diseñamos arquitecturas logísticas a medida. Analizamos la naturaleza de su carga para implementar rutas eficientes y gestión multimodal que garantizan la integridad de la mercancía.
+                        En Global Next Trading, diseñamos arquitecturas logísticas a medida. Analizamos la naturaleza de su carga para implementar rutas eficientes y gestión multimodal que garantizan la integridad de la mercancía.
                     </motion.p>
                 </div>
 
