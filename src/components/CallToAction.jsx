@@ -30,14 +30,14 @@ const CallToAction = () => {
                     </span>
 
                     <h2 className="text-4xl md:text-6xl font-medium text-white mb-8 leading-tight tracking-tighter">
-                        ¿Listo para mover tu carga al <br />
-                        <span className="text-lime-500 text-glow">siguiente puerto?</span>
+                        ¿Listo para hacer crecer tu <br />
+                        <span className="text-lime-500 text-glow">empresa con nosotros?</span>
                     </h2>
 
-                    <p className="text-xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto mb-12">
+                    {/* <p className="text-xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto mb-12">
                         Llegamos a los puertos más importantes del mundo con seguridad y eficiencia.
                         Solicita ahora una cotización personalizada y optimiza tu logística global.
-                    </p>
+                    </p> */}
 
                     <motion.div
                         whileHover={{ scale: 1.05 }}
