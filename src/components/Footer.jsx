@@ -42,12 +42,12 @@ export default () => {
                     <div className="md:col-span-4 lg:col-span-5 space-y-8">
                         <Link to="/">
                             <img
-                                className="h-10 w-auto brightness-110 hidden dark:block"
+                                className="md:h-10 w-auto brightness-110 hidden dark:block"
                                 src={logoGlobal}
                                 alt="Global Next Trading Logo White"
                             />
                             <img
-                                className="h-10 w-auto block dark:hidden"
+                                className="md:h-10 w-auto block dark:hidden"
                                 src={logoGlobalBlack}
                                 alt="Global Next Trading Logo Black"
                             />
