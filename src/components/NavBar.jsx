@@ -5,6 +5,8 @@ import { Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from '@heroicons/react/24/out
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../assets/icons/logo1.png';
 import logo2 from '../assets/icons/logo2.png';
+import logoGlobal from '../assets/icons/globalNextWhite.png';
+import logoGlobalBlack from '../assets/icons/globalNextBlack.png';
 
 export default function NavBar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -158,7 +160,19 @@ export default function NavBar() {
                                 <div className="flex h-full flex-col overflow-y-auto px-6 py-8">
                                     <div className="flex items-center justify-between mb-12">
                                         <span className="text-2xl font-medium tracking-tight dark:text-white">
-                                            GNT<span className="text-lime-500">.</span>
+                                            <img
+                                                className="md:h-10 w-auto brightness-110 hidden dark:block"
+                                                src={logoGlobal}
+                                                alt="Global Next Trading Logo White"
+                                            />
+                                            <img
+                                                className="md:h-10 w-auto block dark:hidden"
+                                                src={logoGlobalBlack}
+                                                alt="Global Next Trading Logo Black"
+                                            />
+                                            {/* GNT<span className="text-lime-500">.</span>
+                                            
+                                            */}
                                         </span>
                                         <button
                                             type="button"
