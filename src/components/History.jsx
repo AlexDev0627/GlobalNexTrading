@@ -44,11 +44,11 @@ const History = () => {
                         </div>
 
                         <div className="mt-10 flex flex-wrap gap-8">
-                            <div className="flex flex-col">
+                            {/* <div className="flex flex-col">
                                 <span className="text-3xl font-medium text-lime-600 dark:text-lime-400">+10</span>
                                 <span className="text-sm text-gray-500 uppercase tracking-widest">Años de Exp.</span>
                             </div>
-                            <div className="w-px h-12 bg-gray-200 dark:bg-gray-800 hidden sm:block" />
+                            <div className="w-px h-12 bg-gray-200 dark:bg-gray-800 hidden sm:block" /> */}
                             <div className="flex flex-col">
                                 <span className="text-3xl font-medium text-lime-600 dark:text-lime-400">100%</span>
                                 <span className="text-sm text-gray-500 uppercase tracking-widest">Compromiso</span>

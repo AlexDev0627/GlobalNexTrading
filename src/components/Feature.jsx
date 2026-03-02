@@ -77,7 +77,7 @@ export default () => {
 
                             <h2 className="text-4xl md:text-5xl font-medium text-white mb-8 leading-tight">
                                 Eleva tu empresa con <br />
-                                <span className="text-lime-500">Global Nex Trading.</span>
+                                <span className="text-lime-500">Global Next Trading.</span>
                             </h2>
 
                             <div className="h-1 w-20 bg-lime-500 mb-8" />

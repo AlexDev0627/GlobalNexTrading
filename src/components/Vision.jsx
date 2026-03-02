@@ -23,26 +23,26 @@ export default function Vision() {
             desc: "Comprendemos la delicadeza del sector alimentario. Contamos con equipos especializados y una programación confiable para el manejo de carga seca y refrigerada.",
             img: "./food.webp",
         },
-        {
-            title: "Industria Automotriz",
-            desc: "Soluciones ágiles y transparentes para el transporte de vehículos y autopartes. Maximizamos la seguridad en el manejo de componentes críticos para la cadena de montaje.",
-            img: "./car.webp",
-        },
-        {
-            title: "Farmacéuticos",
-            desc: "Transporte seguro de medicamentos y bienes esenciales. Cumplimos con estándares internacionales para garantizar entregas rentables y seguras en centros de salud globales.",
-            img: "./farmaceuticos.webp",
-        },
-        {
-            title: "Minería y Minerales",
-            desc: "Décadas de éxito conectando la industria extractiva con mercados internacionales. Ofrecemos la robustez necesaria para el transporte de minerales pesados a nivel mundial.",
-            img: "./minerales.webp",
-        },
-        {
-            title: "Productos Forestales",
-            desc: "Desde madera en troza hasta papel y cartón. Brindamos soluciones versátiles para la exportación de productos madereros y sus derivados con eficiencia logística.",
-            img: "./trees.webp",
-        }
+        // {
+        //     title: "Industria Automotriz",
+        //     desc: "Soluciones ágiles y transparentes para el transporte de vehículos y autopartes. Maximizamos la seguridad en el manejo de componentes críticos para la cadena de montaje.",
+        //     img: "./car.webp",
+        // },
+        // {
+        //     title: "Farmacéuticos",
+        //     desc: "Transporte seguro de medicamentos y bienes esenciales. Cumplimos con estándares internacionales para garantizar entregas rentables y seguras en centros de salud globales.",
+        //     img: "./farmaceuticos.webp",
+        // },
+        // {
+        //     title: "Minería y Minerales",
+        //     desc: "Décadas de éxito conectando la industria extractiva con mercados internacionales. Ofrecemos la robustez necesaria para el transporte de minerales pesados a nivel mundial.",
+        //     img: "./minerales.webp",
+        // },
+        // {
+        //     title: "Productos Forestales",
+        //     desc: "Desde madera en troza hasta papel y cartón. Brindamos soluciones versátiles para la exportación de productos madereros y sus derivados con eficiencia logística.",
+        //     img: "./trees.webp",
+        // }
     ];
 
     const carruselRef = useRef(null);
@@ -106,7 +106,7 @@ export default function Vision() {
                         transition={{ delay: 0.2 }}
                         className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl font-light leading-relaxed"
                     >
-                        En Global Nex Trading, diseñamos arquitecturas logísticas a medida. Analizamos la naturaleza de su carga para implementar rutas eficientes y gestión multimodal que garantizan la integridad de la mercancía.
+                        En Global Next Trading, diseñamos arquitecturas logísticas a medida. Analizamos la naturaleza de su carga para implementar rutas eficientes y gestión multimodal que garantizan la integridad de la mercancía.
                     </motion.p>
                 </div>
 
